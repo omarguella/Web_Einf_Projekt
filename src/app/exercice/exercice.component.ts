@@ -12,6 +12,12 @@ export class ExerciceComponent implements OnInit {
   @Output() sheet3 : boolean ;
   @Output() sheet4 : boolean ;
   @Output() sheet5 : boolean ;
+  @Output() sheet6 : boolean ;
+  @Output() sheet7 : boolean ;
+  @Output() sheet8 : boolean ;
+  @Output() sheet9 : boolean ;
+  @Output() sheet10 : boolean ;
+  @Output() sheet11: boolean ;
 
 
   constructor() { }
@@ -27,6 +33,13 @@ export class ExerciceComponent implements OnInit {
     this.sheet3 = false ;
     this.sheet4 = false ;
     this.sheet5 = false ;
+    this.sheet6 = false ;
+    this.sheet7 = false ;
+    this.sheet8 = false ;
+    this.sheet9 = false ;
+    this.sheet10 = false ;
+    this.sheet11 = false ;
+
   }
 
   sheet2clicked()
@@ -36,6 +49,12 @@ export class ExerciceComponent implements OnInit {
     this.sheet3 = false ;
     this.sheet4 = false ;
     this.sheet5 = false ;
+    this.sheet6 = false ;
+    this.sheet7 = false ;
+    this.sheet8 = false ;
+    this.sheet9 = false ;
+    this.sheet10 = false ;
+    this.sheet11 = false ;
   }
 
   sheet3clicked()
@@ -45,6 +64,12 @@ export class ExerciceComponent implements OnInit {
     this.sheet3 = true ;
     this.sheet4 = false ;
     this.sheet5 = false ;
+    this.sheet6 = false ;
+    this.sheet7 = false ;
+    this.sheet8 = false ;
+    this.sheet9 = false ;
+    this.sheet10 = false ;
+    this.sheet11 = false ;
   }
 
   sheet4clicked()
@@ -54,6 +79,12 @@ export class ExerciceComponent implements OnInit {
     this.sheet3 = false ;
     this.sheet4 = true ;
     this.sheet5 = false ;
+    this.sheet6 = false ;
+    this.sheet7 = false ;
+    this.sheet8 = false ;
+    this.sheet9 = false ;
+    this.sheet10 = false ;
+    this.sheet11 = false ;
   }
 
   sheet5clicked()
@@ -63,5 +94,101 @@ export class ExerciceComponent implements OnInit {
     this.sheet3 = false ;
     this.sheet4 = false ;
     this.sheet5 = true ;
+    this.sheet6 = false ;
+    this.sheet7 = false ;
+    this.sheet8 = false ;
+    this.sheet9 = false ;
+    this.sheet10 = false ;
+    this.sheet11 = false ;
+  }
+
+  sheet6clicked()
+  {
+    this.sheet1 = false ;
+    this.sheet2 = false ;
+    this.sheet3 = false ;
+    this.sheet4 = false ;
+    this.sheet5 = false ;
+    this.sheet6 = true ;
+    this.sheet7 = false ;
+    this.sheet8 = false ;
+    this.sheet9 = false ;
+    this.sheet10 = false ;
+    this.sheet11 = false ;
+  }
+
+  sheet7clicked()
+  {
+    this.sheet1 = false ;
+    this.sheet2 = false ;
+    this.sheet3 = false ;
+    this.sheet4 = false ;
+    this.sheet5 = false ;
+    this.sheet6 = false ;
+    this.sheet7 = true ;
+    this.sheet8 = false ;
+    this.sheet9 = false ;
+    this.sheet10 = false ;
+    this.sheet11 = false ;
+  }
+
+  sheet8clicked()
+  {
+    this.sheet1 = false ;
+    this.sheet2 = false ;
+    this.sheet3 = false ;
+    this.sheet4 = false ;
+    this.sheet5 = false ;
+    this.sheet6 = false ;
+    this.sheet7 = false ;
+    this.sheet8 = true ;
+    this.sheet9 = false ;
+    this.sheet10 = false ;
+    this.sheet11 = false ;
+  }
+
+  sheet9clicked()
+  {
+    this.sheet1 = false ;
+    this.sheet2 = false ;
+    this.sheet3 = false ;
+    this.sheet4 = false ;
+    this.sheet5 = false ;
+    this.sheet6 = false ;
+    this.sheet7 = false ;
+    this.sheet8 = false ;
+    this.sheet9 = true ;
+    this.sheet10 = false ;
+    this.sheet11 = false ;
+  }
+
+  sheet10clicked()
+  {
+    this.sheet1 = false ;
+    this.sheet2 = false ;
+    this.sheet3 = false ;
+    this.sheet4 = false ;
+    this.sheet5 = false ;
+    this.sheet6 = false ;
+    this.sheet7 = false ;
+    this.sheet8 = false ;
+    this.sheet9 = false ;
+    this.sheet10 = true ;
+    this.sheet11 = false ;
+  }
+
+  sheet11clicked()
+  {
+    this.sheet1 = false ;
+    this.sheet2 = false ;
+    this.sheet3 = false ;
+    this.sheet4 = false ;
+    this.sheet5 = false ;
+    this.sheet6 = false ;
+    this.sheet7 = false ;
+    this.sheet8 = false ;
+    this.sheet9 = false ;
+    this.sheet10 = false ;
+    this.sheet11 = true ;
   }
 }
