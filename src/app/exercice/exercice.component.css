@@ -18,23 +18,6 @@ body, html {
 
   }
   
-  .middlepane {
-      width: 40%;
-      height: 100%;
-      position: relative;
-      float: left;
-      background-color: royalblue;
-      border-collapse: collapse;
-  }
-  
-  .rightpane {
-    width: 45%;
-    height: 100%;
-    position: relative;
-    float: right;
-    background-color: yellow;
-    border-collapse: collapse;
-  }
   
   .toppane {
     width: 100%;
@@ -54,4 +37,13 @@ body, html {
   .containerbuttons {
     display: flex;
     align-items: center;
+}
+
+.rightpane {
+  width: 85%;
+  height: 100%;
+  position: relative;
+  float: right;
+  background-color: rgb(255, 0, 21);
+  border-collapse: collapse;
 }
