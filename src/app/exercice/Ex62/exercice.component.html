@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="toppane">
+    <h1> Exercice sheets</h1>
+  </div>    
+  
+    <div class="toppanedown">
+      <div class="containerbuttons">
+        <button (click)="sheet1clicked()">1.Einführung</button>
+        <button (click)="sheet2clicked()">2.CSS Teil I</button>
+        <button (click)="sheet3clicked()">3.CSS Teil II</button>
+        <button (click)="sheet4clicked()">4.JavaScript</button>
+        <button (click)="sheet5clicked()">5.DOM</button>
+        <button (click)="sheet6clicked()">6.ECMAScript</button>
+        <button (click)="sheet7clicked()">7.Functional</button>
+        <button (click)="sheet8clicked()">8.Async</button>
+        <button (click)="sheet9clicked()">9.SVG</button>
+        <button (click)="sheet10clicked()">10.TypeScript</button>
+        <button (click)="sheet11clicked()">11.1 PHP</button>
+      </div>
+    </div>
+  <div class="leftpane">
+    <app-nav-bar [sheet1]="sheet1" [sheet2]="sheet2" [sheet3]="sheet3" [sheet4]="sheet4" [sheet5]="sheet5" 
+    [sheet6]="sheet6" [sheet7]="sheet7" [sheet8]="sheet8" [sheet9]="sheet9" [sheet10]="sheet10" [sheet11]="sheet11" ></app-nav-bar>
+  </div>
+  <div class="rightpane">
+    <router-outlet></router-outlet>
+  </div>
+</div>

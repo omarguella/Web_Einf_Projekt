@@ -12,6 +12,12 @@ export class NavBarComponent implements OnInit {
   @Input() sheet3 : boolean  ;
   @Input() sheet4 : boolean  ;
   @Input() sheet5 : boolean  ;
+  @Input() sheet6 : boolean  ;
+  @Input() sheet7 : boolean  ;
+  @Input() sheet8 : boolean  ;
+  @Input() sheet9 : boolean  ;
+  @Input() sheet10 : boolean  ;
+  @Input() sheet11 : boolean  ;
 
   constructor() { }
 

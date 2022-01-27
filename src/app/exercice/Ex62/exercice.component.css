@@ -1,0 +1,49 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .leftpane {
+      width: 15%;
+      height: 100%;
+      float: left;
+      background-color: rosybrown;
+      border-collapse: collapse;
+
+  }
+  
+  
+  .toppane {
+    width: 100%;
+    height: 50%;
+    border-collapse: collapse;
+    background-color: #4da6ff;
+    padding-left: 40%;
+  }
+
+  .toppanedown {
+    width: 100%;
+    height: 50%;
+    border-collapse: collapse;
+    background-color: #3bf10d;
+  }
+
+  .containerbuttons {
+    display: flex;
+    align-items: center;
+}
+
+.rightpane {
+  width: 85%;
+  height: 100%;
+  position: relative;
+  float: right;
+  background-color: rgb(255, 0, 21);
+  border-collapse: collapse;
+}
