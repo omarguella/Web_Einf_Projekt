@@ -1,10 +1,20 @@
-<div id="aufgabe"><h1>Aufgabe 4.4. Topsort</h1>
-	<p><b><code>[ ["schlafen", "studieren"], ["essen", "studieren"], ["studieren", "prüfen"] ]</code>In jedem Projekt fallen Aufgaben (Tasks) an. Zwischen den Aufgaben gibt es paarweise Abhängigkeiten. Z.B. kann Task2 von Task1 abhängen, d.h. erst muss Task1 fertig sein, bevor Task2 starten kann, weil es dessen Ergebnisse benötigt. Tasks können auch unabhängig voneinander sein und parallel ablaufen. In JavaScript können Sie die Abhängigkeiten in Arrays codieren, z.B. kann man bei nicht prüfen, ohne vorher gegessen zu haben. Transitive Abhängigkeiten müssen also berücksichtigt werden.</b></p>
-	<p>Schreiben Sie in JavaScript eine Funktion<code> topsort()</code>, die eine <a href="https://de.wikipedia.org/wiki/Topologische_Sortierung" target="_blank" >topologische Sortierung</a> berechnet. Topologische Sortierung ist eine Form von Sortierung. Sie kennen die Funktion Array.prototype.sort() und wissen, was als Ergebnis erwartet wird, nämlich eine sortiere Liste. Genauso ist das hier. Die Funktion topsort() soll eine sortierte Liste ausgeben, die keine der eingegebenen Abhängigkeiten verletzt.
-Achten Sie auf Performanz. Berechnen Sie die topologische Sortierung in linearer Zeit (Average Case).</p>
+<div id="aufgabe">
+  <h1>Aufgabe 4.4. Topsort</h1>
+  <p><b><code>[ ["schlafen", "studieren"], ["essen", "studieren"], ["studieren", "prüfen"] ]</code>In jedem Projekt
+      fallen Aufgaben (Tasks) an. Zwischen den Aufgaben gibt es paarweise Abhängigkeiten. Z.B. kann Task2 von Task1
+      abhängen, d.h. erst muss Task1 fertig sein, bevor Task2 starten kann, weil es dessen Ergebnisse benötigt. Tasks
+      können auch unabhängig voneinander sein und parallel ablaufen. In JavaScript können Sie die Abhängigkeiten in
+      Arrays codieren, z.B. kann man bei nicht prüfen, ohne vorher gegessen zu haben. Transitive Abhängigkeiten müssen
+      also berücksichtigt werden.</b></p>
+  <p>Schreiben Sie in JavaScript eine Funktion<code> topsort()</code>, die eine <a
+      href="https://de.wikipedia.org/wiki/Topologische_Sortierung" target="_blank">topologische Sortierung</a>
+    berechnet. Topologische Sortierung ist eine Form von Sortierung. Sie kennen die Funktion Array.prototype.sort() und
+    wissen, was als Ergebnis erwartet wird, nämlich eine sortiere Liste. Genauso ist das hier. Die Funktion topsort()
+    soll eine sortierte Liste ausgeben, die keine der eingegebenen Abhängigkeiten verletzt.
+    Achten Sie auf Performanz. Berechnen Sie die topologische Sortierung in linearer Zeit (Average Case).</p>
 
-<p>QUELLCODE:</p>
-	<pre> &lt;!DOCTYPE html>
+  <p>QUELLCODE:</p>
+  <pre> &lt;!DOCTYPE html>
 &lt;html>
 &lt;head>
 &lt;meta charset="UTF-8"/>
@@ -53,10 +63,13 @@ function topsort(array)
 
 
 </pre>
-<p><b>Testen Sie Ihren JavaScript-Code. Verwenden Sie für Ihre Tests die Funktion<a href="https://developer.mozilla.org/de/docs/Web/API/Console/assert" target="_blank" > console.assert<a>. Geben Sie hier Ihre Tests ein:
+  <p><b>Testen Sie Ihren JavaScript-Code. Verwenden Sie für Ihre Tests die Funktion<a
+        href="https://developer.mozilla.org/de/docs/Web/API/Console/assert" target="_blank"> console.assert</a>.
+      Geben
+      Sie hier Ihre Tests ein</b></p>
 
-<p>QUELLCODE:</p>
-<pre> <br>
+  <p>QUELLCODE:</p>
+  <pre> <br>
 var array = [ ["schlafen", "studieren"], ["essen", "studieren"], ["studieren", "prüfen"]];
  
 console.assert(topSort(array) === [ "schlafen", "essen", "studieren", "prüfen"], "Richtige Ergebnisse");

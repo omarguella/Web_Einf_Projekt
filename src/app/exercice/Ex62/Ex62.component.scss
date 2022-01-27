@@ -1,0 +1,46 @@
+#aufgabe {
+  background: #dafdff;
+  border: 1px solid black;
+}
+
+
+
+pre {
+  overflow: auto;
+  background: #e3fcde;
+  border: 2px solid gray;
+  border-style: dotted;
+}
+
+
+
+.execute {
+  padding: 5px 11px;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: Verdana, sans-serif;
+  text-shadow: 3px 3px 3px #ababab;
+
+  background-color: #689ef7;
+  color: white;
+  border: none;
+  border-radius: 9px;
+}
+
+/*W3school*/
+.execute:active {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(8px);
+}
+
+/* Quelle WE APP*/
+.box {
+  border: thin solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem;
+  font-size: x-large;
+  font-weight: bolder;
+  width: fit-content;
+  box-shadow: 4px 4px 3px 0 #777777;
+}

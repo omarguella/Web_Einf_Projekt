@@ -1,3 +1,144 @@
-<p>
-  Ex64 works!
-</p>
+<div id="aufgabe">
+  <h1>6.4. Proxy</h1>
+  <p><b>Erweitern Sie Ihre Vorrang-Klasse um Logging, indem Sie ein <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy"
+        target="_blank">Proxy </a>einfügen. Lassen Sie sich vom Logger bei jedem Schritt ausgeben, wie viele der
+      Vorrangrelationen noch übrig bleiben.
+      Verwenden Sie so weit wie möglich High-Level-Methoden wie<a
+        href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
+        target="_blank"> Object.keys </a>und High-Level-Datenstrukturen wie Map und Set und deren Methoden, anstatt
+      mühsam von Hand zu
+      iterieren und zu zählen. </b></p>
+  <p>Geben Sie die HTML-Seite inkl. ES6-Code inkl. Tests hier ein. Verwenden Sie für Ihre Tests die Funktion <a
+      href="https://developer.mozilla.org/de/docs/Web/API/Console/assert" target="_blank">console.assert</a>. </p>
+  <p><b>QUELLCODE:</b></p>
+  <pre>
+	function topsort(array)   
+
+
+    var Knoten = [];
+    var pack = [];
+    var gesehen = [];
+
+    for (var k = 0; k &lt; array.length; k++)   
+        if (Knoten.indexOf(array[k][0]) &lt; 0) Knoten.push(array[k][0]);
+        if (Knoten.indexOf(array[k][1]) &lt; 0) Knoten.push(array[k][1]);
+      
+
+    Knoten.forEach(function (knote)   
+        if (gesehen.indexOf(knote) &lt; 0)   
+            sort(knote);
+          
+      );
+
+    function sort(knote)   
+        gesehen.push(knote);
+        array.forEach(function (Kante)   
+            if (gesehen.indexOf(Kante[1]) &lt; 0 && Kante[0] == knote)   
+                sort(Kante[1]);
+              
+          );
+        pack.push(knote);
+      
+    return pack.reverse();
+  
+
+class Vorrang   
+    [Symbol.iterator]()   
+        return this.array.values()
+      
+    constructor(array)   
+        this.array = topsort(array);
+      
+
+
+  
+
+
+
+try   
+
+    var text = "schlafen,studieren,essen,studieren,studieren,prüfen";
+    console.log(text);
+
+    var array = text.split(",").map(String);
+    if ((array.length % 2) != 0)   
+        throw new Error(' Geben Sie bitte eine Komplette Vorrangrelationen');
+      
+
+    var gfg = new Array(array.length / 2);
+
+
+    // Loop to create 2D array using 1D array
+    for (var i = 0; i &lt; gfg.length; i++)   
+        gfg[i] = new Array(2);
+      
+
+    var h = 0;
+
+    // Loop to initialize 2D array elements.
+    for (let i = 0; i &lt; array.length / 2; i++)   
+        for (let j = 0; j &lt; 2; j++)   
+            gfg[i][j] = array[h++];
+          
+      
+
+    const studentenLeben = new Vorrang(gfg);
+
+    var final = [];
+    for (const next of studentenLeben)   
+        final.push(next);
+      
+
+    console.log(final);
+
+   catch (err)   
+
+    console.log(err.message);
+  
+
+
+
+
+const studentenLeben = new Vorrang([
+    ["schlafen", "studieren"],
+    ["essen", "studieren"],
+    ["studieren", "prüfen"]
+]);
+
+//TEST
+const arrayTest = new Vorrang([
+    ["schlafen", "studieren"],
+    ["essen", "studieren"],
+    ["studieren", "prüfen"]
+]);
+var arrayfinal = [];
+for (const next of arrayTest)   
+    arrayfinal.push(next);
+  
+var ausgabe = ["schlafen", "essen", "studieren", "prüfen"];
+for (let i = 0; i &lt; arrayfinal.length; i++)   
+
+    console.assert(ausgabe[i] === arrayfinal[i], `diese beide Werte $  ausgabe[i]   und $  arrayfinal[i]   sind nicht gleich`);
+  
+
+
+//Proxy
+
+const generator = new Proxy(studentenLeben.gen,   
+    apply(target, thisArg, argumentList)   
+        console.log(studentenLeben.getSize());
+        return target(studentenLeben);
+      
+  );
+
+while (true)   
+    tab = generator().next();
+    if (tab["done"] !== false)   
+        break;
+      
+    console.assert(final.includes(out["value"]));
+    console.assert(ausgabe[0] === out["value"]);
+    testArraySequence.splice(0, 1);
+   
+	</pre>

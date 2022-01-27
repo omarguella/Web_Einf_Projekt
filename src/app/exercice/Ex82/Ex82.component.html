@@ -1,3 +1,50 @@
-<p>
-  Ex82 works!
-</p>
+<div id="aufgabe">
+  <h1>8.1 Promises</h1>
+  <p><b>Lösen Sie die letzte Aufgabe mit async / await statt Promise. </b></p>
+  <p><b>QUELLCODE:</b></p>
+
+  <pre>&lt;!DOCTYPE html>
+&lt;html>
+
+&lt;head>
+
+    &lt;script>
+       
+(async _=>   
+	   var texta
+        var textb 
+
+                await Promise.all([
+                    (async _=> a = await readFile('.A.txt'))(),
+                    (async _=> b = await readFile('.B.txt'))()
+                ]);
+
+       
+            var maxlen = (arrayA.length >= arrayB.length) ? maxlen = arrayA.length : maxlen = arrayB.length;
+
+            for (var i = 0; i &lt; maxlen; i++)   
+                document.getElementById("feld").textContent += arrayA[i] + arrayB[i];
+              
+          );
+		         async function readFile(text)  
+                let importText = await fetch(text);
+                let newText = await importText.text();
+                return newText.split('\r\n');
+              
+
+    &lt;/script>
+
+&lt;/head>
+
+&lt;body>
+    &lt;div>
+        &lt;h1>8.1. Promises&lt;/h1>
+        &lt;div id="feld">&lt;/div>
+
+    &lt;/div>
+
+&lt;/body>
+
+&lt;/html>
+
+	</pre>
