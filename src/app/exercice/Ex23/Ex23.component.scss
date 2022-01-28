@@ -1,3 +1,33 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.middlepane {
+  width: 64%;
+  height: 100%;
+  position: relative;
+  float: left;
+  background-color: #dafdff;
+  border-collapse: collapse;
+}
+
+.rightpane {
+  width: 35%;
+  height: 100%;
+  position: relative;
+  float: right;
+
+
+}
+
+.Seite_html {
+  border-style: solid;
+  border-width: 5px;
+  background-color: rgb(255, 255, 255);
+
+}
+
 #aufgabe {
   background: #dafdff;
   border: 1px solid black;
@@ -28,4 +58,69 @@ pre {
   background: #e3fcde;
   border: 2px solid gray;
   border-style: dotted;
+}
+
+.grandpa {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+  background-color: #b2d6d1;
+}
+
+.papa {
+  left: 5%;
+  top: 11%;
+  width: 90%;
+  height: 100%;
+  position: fixed;
+  background-color: #F0FFFF;
+}
+
+.p0 {
+  margin-top: 10px;
+  margin-left: 45%;
+  font-family: "Brush Script MT";
+  font-size: 40px;
+}
+
+.p1 {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 35%;
+  font-family: "Lucida Handwriting";
+
+}
+
+td {
+  height: 50px;
+}
+
+.left {
+  text-align: right;
+  font-family: "Papyrus";
+
+}
+
+.right {
+  text-align: left;
+}
+
+table {
+  display: flex;
+
+  width: 80%;
+  margin-left: 10%;
+}
+
+#ausfuhren {
+  color: rgb(105, 35, 56);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
 }
