@@ -1,17 +1,17 @@
 .middlepane {
-    width: 10%;
-    height: 100%;
-    position: relative;
-    float: left;
-    background-color: royalblue;
-    border-collapse: collapse;
+  width: 70%;
+  height: 100%;
+  position: relative;
+  float: left;
+  background-color: royalblue;
+  border-collapse: collapse;
 }
 
 .rightpane {
-  width: 10%;
+  width: 30%;
   height: 100%;
   position: relative;
   float: right;
-  background-color: yellow;
+  background-color: rgb(255, 255, 255);
   border-collapse: collapse;
 }

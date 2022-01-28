@@ -1,49 +1,120 @@
-body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-  
-  .container {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .leftpane {
-      width: 15%;
-      height: 100%;
-      float: left;
-      background-color: rosybrown;
-      border-collapse: collapse;
-
-  }
-  
-  
-  .toppane {
-    width: 100%;
-    height: 50%;
-    border-collapse: collapse;
-    background-color: #4da6ff;
-    padding-left: 40%;
-  }
-
-  .toppanedown {
-    width: 100%;
-    height: 50%;
-    border-collapse: collapse;
-    background-color: #3bf10d;
-  }
-
-  .containerbuttons {
-    display: flex;
-    align-items: center;
+body,
+html {
+  width: 100%;
+  height: 100%;
 }
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.leftpane {
+  min-width: 15%;
+  height: 100%;
+  float: left;
+  background-color: rgb(255, 0, 0);
+
+}
+
+
+.toppane {
+  min-width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  background-image: linear-gradient(#FFFFFF, rgb(96, 123, 245));
+}
+
+#logo {
+  max-width: 20%;
+  height: 100%;
+  opacity: 80%;
+}
+
+#aboutme {
+  padding: 2px;
+  left: 90%;
+  min-width: 70px;
+  height: 40px;
+  position: absolute;
+  background-color: #d10ff8;
+  border-radius: 10px;
+  font-family: 'Rouge Script', cursive;
+  color: #CEF0D4;
+  font-size: 20px;
+}
+
+#aboutme:active {
+  background-color: rgb(144, 130, 219);
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(37, 50, 231, 0.24), 0 17px 50px 0 rgba(108, 120, 228, 0.19);
+  transform: translateY(8px);
+}
+
+#title1 {
+  min-width: auto;
+  padding-left: 30%;
+  color: #CEF0D4;
+  font-family: 'Rouge Script', cursive;
+  font-size: 50px;
+  font-weight: absolute;
+  line-height: 90px;
+  margin: 0 0 50px;
+  text-shadow: 1px 1px 2px #082b34;
+}
+
+.toppanedown {
+  min-width: 10%;
+  height: 100%;
+  border-collapse: collapse;
+  background-color: #5eacf5;
+}
+
+.containerbuttons {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: -webkit-sticky;
+  top: 5vh;
+  z-index: 3;
+  margin-top: 5vh;
+  flex-direction: row;
+  margin-bottom: 0.5vh;
+  min-width: 70%;
+  height: 100%;
+
+}
+
+.navbt {
+  background-color: #5eacf5;
+  color: white;
+  padding: 25px;
+  font-size: 17px;
+  font-weight: absolute;
+  border: none;
+  font-family: "Trebuchet MS";
+  font-size: 18px;
+
+}
+
+.navbt:hover {
+  background-color: rgb(228, 206, 167);
+  color: rgb(0, 26, 255)
+}
+
+.navbt:active {
+  transform: translateY(8px);
+
+}
+
+
 
 .rightpane {
   width: 85%;
   height: 100%;
   position: relative;
   float: right;
-  background-color: rgb(255, 0, 21);
+  background-color: #4ee6ee;
   border-collapse: collapse;
 }

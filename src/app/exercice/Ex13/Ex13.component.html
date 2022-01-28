@@ -1,15 +1,17 @@
-<div class="middlepane">
-  <div id="aufgabe">
-    <h1>1.3. HTML-Literatur lesen und Fragen beantworten</h1>
-    <p><b>Arbeiten Sie ein HTML-Tutorial durch ( <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3
-          Schools</a> oder <a href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/HTML-Einstieg"
-          target="_blank">selfhtml</a> ) und beantworten Sie dazu folgende Fragen: </b></p>
-    <p><b>Was ist HTML?</b></p>
-    <p>HTML ist HyperText Markup Sprache für Webseiten.</p>
-    <hr>
-    <p><b>Wie kann man eine geschachtelte geordnete Liste der Schachtelungstiefe 3 erzeugen? <button
-          class="execute">Code Ausfuehren</button></b></p>
-    <pre>
+<div class="container">
+  <div class="middlepane">
+    <div id="aufgabe">
+      <h1>1.3. HTML-Literatur lesen und Fragen beantworten</h1>
+      <p><b>Arbeiten Sie ein HTML-Tutorial durch ( <a href="https://www.w3schools.com/html/default.asp"
+            target="_blank">W3
+            Schools</a> oder <a href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/HTML-Einstieg"
+            target="_blank">selfhtml</a> ) und beantworten Sie dazu folgende Fragen: </b></p>
+      <p><b>Was ist HTML?</b></p>
+      <p>HTML ist HyperText Markup Sprache für Webseiten.</p>
+      <hr>
+      <p><b>Wie kann man eine geschachtelte geordnete Liste der Schachtelungstiefe 3 erzeugen? <button
+            class="execute">Code Ausfuehren</button></b></p>
+      <pre>
 &lt;!DOCTYPE html>
 &lt;html>
 &lt;body>
@@ -33,10 +35,10 @@
 &lt;/body>
 &lt;/html>
 </pre>
-    <hr>
+      <hr>
 
-    <p><b>Wie ist eine HTML-Tabelle aufgebaut? <button class="execute">Code Ausfuehren</button> </b></p>
-    <pre>
+      <p><b>Wie ist eine HTML-Tabelle aufgebaut? <button class="execute">Code Ausfuehren</button> </b></p>
+      <pre>
 &lt;table >
   &lt;tr>
     &lt;th>Titel 1&lt;/th>
@@ -52,15 +54,17 @@
   &lt;/tr>
 &lt;/table>
 </pre>
-    <hr>
+      <hr>
 
-    <p><b>Welche Konventionen sollte man bei Pfaden und Dateinamen beachten?</b></p>
-    <p>Es gibt spezielle Zeichen, die nicht verwendet werden dürfen, weil sie im Dateisystem eine Bedeutung haben. Dazu
-      gehören der Doppelpunkt und die Schrägstriche / und \ als Trennzeichen für Laufwerksbuchstaben und Ordner, und die
-      Zeichen * und ? als Jokerzeichen in der Dateisuche. </p>
-    <hr>
-    <p><b>Wie baut man in HTML ein Menü? <button class="execute">Code Ausfuehren</button> </b></p>
-    <pre>
+      <p><b>Welche Konventionen sollte man bei Pfaden und Dateinamen beachten?</b></p>
+      <p>Es gibt spezielle Zeichen, die nicht verwendet werden dürfen, weil sie im Dateisystem eine Bedeutung haben.
+        Dazu
+        gehören der Doppelpunkt und die Schrägstriche / und \ als Trennzeichen für Laufwerksbuchstaben und Ordner, und
+        die
+        Zeichen * und ? als Jokerzeichen in der Dateisuche. </p>
+      <hr>
+      <p><b>Wie baut man in HTML ein Menü? <button class="execute">Code Ausfuehren</button> </b></p>
+      <pre>
 &lt;div class="menu">
   &lt;a href="#" class="active">Home&lt;/a>
   &lt;a href="#">link 1&lt;/a>
@@ -69,46 +73,49 @@
   &lt;a href="#">Link 4&lt;/a>
 &lt;/div>
 </pre>
-    <hr>
-    <p><b>Welche Attribute sollte man bei Bildern wie verwenden?</b></p>
-    <p>src attribute specifies the path (URL) to the image. alt attribute should describe the image. style,width and
-      height attribute to specify the width and height of an image.</p>
+      <hr>
+      <p><b>Welche Attribute sollte man bei Bildern wie verwenden?</b></p>
+      <p>src attribute specifies the path (URL) to the image. alt attribute should describe the image. style,width and
+        height attribute to specify the width and height of an image.</p>
+    </div>
   </div>
-</div>
 
 
 
 
-<div class="rightpane">
+  <div class="rightpane">
+    <p id="ausfuhren"> QUELLCODE AUSFÜHRUNG</p>
+    <div class="Seite_html">
+      <!DOCTYPE html>
+      <html>
 
-  <!DOCTYPE html>
-  <html>
-
-  <head>
-    <title>execute A1 E3 F1</title>
+      <head>
+        <title>execute A1 E3 F1</title>
 
 
-  </head>
+      </head>
 
-  <body>
+      <body>
 
-    <h2>geschachtelte geordnete </h2>
-    <p>List:</p>
+        <h2>geschachtelte geordnete </h2>
+        <p>List:</p>
 
-    <ol>
-      <li>Erste Element</li>
-      <li>Zweite Element
         <ol>
-          <li>Schachtelungstiefe 1</li>
-          <ol>
-            <li>Schachtelungstiefe 2</li>
-          </ol>
+          <li>Erste Element</li>
+          <li>Zweite Element
+            <ol>
+              <li>Schachtelungstiefe 1</li>
+              <ol>
+                <li>Schachtelungstiefe 2</li>
+              </ol>
+            </ol>
+          </li>
+          <li>Dritte Element</li>
         </ol>
-      </li>
-      <li>Dritte Element</li>
-    </ol>
 
-  </body>
+      </body>
 
-  </html>
+      </html>
+    </div>
+  </div>
 </div>
