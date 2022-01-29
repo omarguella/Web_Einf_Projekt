@@ -72,3 +72,11 @@ pre {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: translateY(8px);
 }
+
+h1 {
+  grid-area: b;
+  text-align: center;
+  background-color: #d9cccc;
+  padding: 10px;
+  margin-top: 0px;
+}

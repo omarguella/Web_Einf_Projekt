@@ -126,7 +126,7 @@ html {
 }
 
 .navbt:active {
-  transform: translateY(8px);
+  transform: translateY(-8px);
 
 }
 

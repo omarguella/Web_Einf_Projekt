@@ -1,17 +1,24 @@
 #aufgabe {
-	background:#dafdff;
-	border: 1px solid black;
+  background: #dafdff;
+  border: 1px solid black;
 }
 
 
 
 pre {
-	overflow: auto;
-	background:#e3fcde;
-	border:2px solid gray;
-	border-style: dotted;
+  overflow: auto;
+  background: #e3fcde;
+  border: 2px solid gray;
+  border-style: dotted;
 }
 
+h1 {
+  grid-area: b;
+  text-align: center;
+  background-color: #d9cccc;
+  padding: 10px;
+  margin-top: 0px;
+}
 
 
 .execute {
@@ -29,7 +36,6 @@ pre {
 
 /*W3school*/
 .execute:active {
-   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: translateY(8px);
 }
-

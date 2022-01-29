@@ -44,3 +44,11 @@ pre {
   width: fit-content;
   box-shadow: 4px 4px 3px 0 #777777;
 }
+
+h1 {
+  grid-area: b;
+  text-align: center;
+  background-color: #d9cccc;
+  padding: 10px;
+  margin-top: 0px;
+}
