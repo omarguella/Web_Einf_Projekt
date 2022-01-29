@@ -46,6 +46,16 @@
   border-radius: 9px;
 }
 
+#ausfuhren {
+  color: rgb(105, 35, 56);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+
 /*W3school*/
 .execute:active {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -113,14 +123,4 @@ table {
 
   width: 80%;
   margin-left: 10%;
-}
-
-#ausfuhren {
-  color: rgb(105, 35, 56);
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 27px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 1;
-  text-align: center;
 }

@@ -1,34 +1,131 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.middlepane {
+  width: 64%;
+  height: 100%;
+  position: relative;
+  float: left;
+  background-color: #dafdff;
+  border-collapse: collapse;
+}
+
+.rightpane {
+  width: 35%;
+  height: 100%;
+  position: relative;
+  float: right;
+
+
+}
+
+#ausfuhren {
+  color: rgb(105, 35, 56);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+
+.Seite_html {
+  border-style: solid;
+  border-width: 5px;
+  background-color: rgb(255, 255, 255);
+
+}
+
 #aufgabe {
-	background:#dafdff;
-	border: 1px solid black;
+  background: #dafdff;
+  border: 1px solid black;
 }
 
 
 
 pre {
-	overflow: auto;
-	background:#e3fcde;
-	border:2px solid gray;
-	border-style: dotted;
+  overflow: auto;
+  background: #e3fcde;
+  border: 2px solid gray;
+  border-style: dotted;
 }
 
+body {
+  display: grid;
+  grid-template: "a""b""c""d";
+  min-height: 100vh;
+}
 
+header nav ul {
+  background-color: #414141;
+  grid-area: a;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
 
-.execute {
-  padding: 5px 11px;
-  cursor: pointer;
-  font-size: 17px;
-  font-family: Verdana, sans-serif;
-  text-shadow: 3px 3px 3px #ababab;
+}
 
+a {
+  text-decoration: none;
   color: white;
-  background-color: #689ef7;
-  border: none;
-  border-radius: 9px;
+  font-size: 20px;
 }
 
-/*W3school*/
-.execute:active {
-   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  transform: translateY(8px);
+h1 {
+  grid-area: b;
+  text-align: center;
+  background-color: #d9cccc;
+  padding: 10px;
+  margin-top: 0px;
+}
+
+.content {
+  grid-area: c;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  background-color: #d9cccc;
+  padding: 15px;
+  height: 600px;
+  margin-top: -21px;
+
+}
+
+.content img {
+  height: 70%;
+  border: black 1px solid;
+  border-radius: 20px;
+  margin-top: 10%;
+
+}
+
+.content .paragraph {
+  text-align: center;
+  padding-top: 100px;
+}
+
+footer {
+  grid-area: d;
+  background-color: #010224;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  gap: 20px;
+  font-size: 20px;
+}
+
+button {
+  background-color: orange;
+  width: 250px;
+  height: 30px;
+  border-radius: 4px;
+
+
 }
