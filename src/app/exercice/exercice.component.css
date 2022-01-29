@@ -32,19 +32,33 @@ html {
   opacity: 80%;
 }
 
-#aboutme {
-  padding: 2px;
+.aboutme {
   left: 90%;
-  min-width: 70px;
-  height: 40px;
+  max-width: 50%;
+  box-shadow: 0px 12px 12px -7px #3e7327;
+  background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  background-color: #77b55a;
+  border-radius: 4px;
+  border: 1px solid #4b8f29;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 37px;
+  text-decoration: none;
+  text-shadow: -1px -1px 50px #5b8a3c;
   position: absolute;
-  background-color: #d10ff8;
-  border-radius: 10px;
-  font-family: 'Rouge Script', cursive;
-  color: #CEF0D4;
-  font-size: 20px;
-  height: 40px;
 
+}
+
+.aboutme:hover {
+  background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+  background-color: #72b352;
+}
+
+.aboutme:active {
+  transform: translateY(8px);
 }
 
 #aboutme:active {
@@ -114,6 +128,7 @@ html {
 
 
 .rightpane {
+  margin-right: -2px;
   width: 85%;
   height: 100%;
   position: relative;
