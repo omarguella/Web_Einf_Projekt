@@ -10,10 +10,12 @@ html {
 }
 
 .leftpane {
-  min-width: 15%;
+  width: 290px;
   height: 100%;
   float: left;
-  background-color: rgb(255, 0, 0);
+  background-color: #13dceb;
+  border: 6px solid rgb(33, 177, 187);
+  background-image: linear-gradient(rgb(96, 123, 245), #FFFFFF);
 
 }
 
@@ -42,6 +44,8 @@ html {
   font-family: 'Rouge Script', cursive;
   color: #CEF0D4;
   font-size: 20px;
+  height: 40px;
+
 }
 
 #aboutme:active {
@@ -59,7 +63,7 @@ html {
   font-size: 50px;
   font-weight: absolute;
   line-height: 90px;
-  margin: 0 0 50px;
+  margin: 0 0 -50px;
   text-shadow: 1px 1px 2px #082b34;
 }
 
@@ -67,7 +71,7 @@ html {
   min-width: 10%;
   height: 100%;
   border-collapse: collapse;
-  background-color: #5eacf5;
+  background-color: rgb(96, 123, 245);
 }
 
 .containerbuttons {
@@ -87,7 +91,7 @@ html {
 }
 
 .navbt {
-  background-color: #5eacf5;
+  background-color: rgb(96, 123, 245);
   color: white;
   padding: 25px;
   font-size: 17px;

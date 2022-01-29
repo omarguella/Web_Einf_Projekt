@@ -1,7 +1,15 @@
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 5px;
+
+}
+
 .buttons {
   display: flex;
   /* Green */
-  border: 1px solid green;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -10,4 +18,22 @@
   cursor: pointer;
   width: 150px;
   display: block;
+  height: 900px;
+
+}
+
+
+.aufgabe {
+  font-size: 36px;
+  line-height: 1.8;
+  letter-spacing: 0.011em;
+  font-style: normal;
+  min-width: auto;
+  padding-left: 12%;
+  color: #d3e3f0;
+  font-family: 'Rouge Script', cursive;
+  font-size: 40px;
+  font-weight: absolute;
+  line-height: 90px;
+  text-shadow: 1px 1px 2px #082b34;
 }
