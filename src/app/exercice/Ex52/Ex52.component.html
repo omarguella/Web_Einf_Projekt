@@ -1,10 +1,22 @@
-<div id="aufgabe"><h1>5.2. Rednerliste mit Zeitmessung </h1>
-	<p><b>Implementieren Sie die interaktive Anwendung "Rednerliste mit Zeitmessung" selbstständig in JavaScript durch Nutzung der<a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank" > DOM API</a> und der <a href="https://www.w3schools.com/js/js_timing.asp" target="_blank" >Timer-Funktionen</a>. Neue Redner sollen auf Knopfdruck hinzugefügt werden können. Deren Uhr wird dann sofort automatisch gestartet und alle anderen Uhren angehalten. Bei jedem Redner soll die individuelle, gemessene Redezeit sekundengenau angezeigt werden. Für jeden Redner soll es einen eigenen Start-/Stopp-Button geben. Es soll immer nur eine Uhr laufen. Angezeigt werden sollen die bisherigen Summenzeiten aller Redebeiträge der betreffenden Person. Suchen Sie eine möglichst kurze und elegante Lösung. Achten Sie gleichzeitig auf gute Usability: z.B. wenn die Eingabe mit einem Return beendet wird, soll der Button-Click nicht mehr erforderlich sein, usw.</b></p>
-<img src="https://kaul.inf.h-brs.de/we/assets/img/Rednerliste.png"  style="max-width:600px;width:100%">	
-	<p>Geben Sie die komplette HTML-Seite exkl. JavaScript-Quelltext an. Schreiben Sie Ihren JavaScript-Quelltext in eine separate Datei.</p>
-<p><b>QUELLCODE:</b></p>
+<div class="container">
+  <div class="middlepane">
+    <div id="aufgabe">
+      <h1>5.2. Rednerliste mit Zeitmessung </h1>
+      <p><b>Implementieren Sie die interaktive Anwendung "Rednerliste mit Zeitmessung" selbstständig in JavaScript durch
+          Nutzung der<a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank"> DOM API</a> und der <a
+            href="https://www.w3schools.com/js/js_timing.asp" target="_blank">Timer-Funktionen</a>. Neue Redner sollen
+          auf Knopfdruck hinzugefügt werden können. Deren Uhr wird dann sofort automatisch gestartet und alle anderen
+          Uhren angehalten. Bei jedem Redner soll die individuelle, gemessene Redezeit sekundengenau angezeigt werden.
+          Für jeden Redner soll es einen eigenen Start-/Stopp-Button geben. Es soll immer nur eine Uhr laufen. Angezeigt
+          werden sollen die bisherigen Summenzeiten aller Redebeiträge der betreffenden Person. Suchen Sie eine
+          möglichst kurze und elegante Lösung. Achten Sie gleichzeitig auf gute Usability: z.B. wenn die Eingabe mit
+          einem Return beendet wird, soll der Button-Click nicht mehr erforderlich sein, usw.</b></p>
+      <img src="https://kaul.inf.h-brs.de/we/assets/img/Rednerliste.png" style="max-width:600px;width:100%">
+      <p>Geben Sie die komplette HTML-Seite exkl. JavaScript-Quelltext an. Schreiben Sie Ihren JavaScript-Quelltext in
+        eine separate Datei.</p>
+      <p><b>QUELLCODE:</b></p>
 
-	<pre>&lt;!DOCTYPE html>
+      <pre>&lt;!DOCTYPE html>
 &lt;html>&lt;head>
         &lt;script type="text/javascript" src="Übung5_2rednerListe.js">&lt;/script>
     &lt;/head>
@@ -23,10 +35,10 @@
 
 &lt;/body>&lt;/html>
 	</pre>
-	
-		<p>Fügen Sie Ihren JavaScript-Quelltext aus der separaten Datei in das folgende Textarea ein:</p>
 
-	<pre>let aktuTime , aktuIntervl , aktuButton;
+      <p>Fügen Sie Ihren JavaScript-Quelltext aus der separaten Datei in das folgende Textarea ein:</p>
+
+      <pre>let aktuTime , aktuIntervl , aktuButton;
 
 window.onload = function () 
 	    const list = document.getElementById("Rednerliste");
@@ -114,3 +126,10 @@ function stopAll( timer, button,intervl)
 
 
 	</pre>
+    </div>
+  </div>
+  <div class="rightpane">
+    <p id="ausfuhren"> QUELLCODE AUSFÜHREN</p>
+    <a class="execute" href="assets/loesung5.2.html" target="_blank">CLICKEN SIE HIER BITTE !</a>
+  </div>
+</div>

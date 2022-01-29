@@ -21,13 +21,6 @@
 
 }
 
-.Seite_html {
-  border-style: solid;
-  border-width: 5px;
-  background-color: rgb(255, 255, 255);
-
-}
-
 #ausfuhren {
   color: rgb(105, 35, 56);
   font-family: 'Helvetica Neue', sans-serif;
@@ -36,6 +29,13 @@
   letter-spacing: -1px;
   line-height: 1;
   text-align: center;
+}
+
+.Seite_html {
+  border-style: solid;
+  border-width: 5px;
+  background-color: rgb(255, 255, 255);
+
 }
 
 #aufgabe {
@@ -57,14 +57,14 @@ pre {
 .execute {
   padding: 5px 11px;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 29px;
   font-family: Verdana, sans-serif;
   text-shadow: 3px 3px 3px #ababab;
-
   color: white;
   background-color: #689ef7;
   border: none;
   border-radius: 9px;
+  margin-left: 18%;
 }
 
 /*W3school*/
