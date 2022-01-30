@@ -4,91 +4,88 @@
       Parameter entgegennimmt und eine Funktion zurückgibt, die dieses Argument zurückgibt. </b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
   <p>QUELLCODE:</p>
-  <pre>    function identity(x)  
-        return x;
-      
-    
-    function identity_function(y)  
-        return(identity(y));
-      
+  <pre>    function identity(x)&#123;
+      return x;
+  &#125;
+  
+  function identity_function(y)&#123;
+      return(identity(y));
+  &#125;
 console.log(identity_function(3));
-	</pre>
-
-
-  <p><b>Schreiben Sie eine Addier-Funktion <code style="color:#ff0000">addf()</code>, so dass <code
-        style="color:#ff0000">addf(x)(y)</code> genau <code style="color:#ff0000">x + y </code>zurück gibt. (Es haben
-      also zwei Funktionsaufrufe zu erfolgen.<code style="color:#ff0000"> addf(x)</code> liefert eine Funktion, die auf
-      <code style="color:#ff0000">y</code> angewandt wird.) </b></p>
-  <p>Geben Sie den JavaScript-Quelltext an: </p>
-  <p>QUELLCODE:</p>
-
-  <pre>    function addf (x)   
-return function (y)   
-return x+y;
 </pre>
 
-
-
-  <p><b>Schreiben Sie eine Funktion <code style="color:#ff0000">applyf()</code>, die aus einer binären Funktion wie
-      <code style="color:#ff0000">add(x,y)</code> eine Funktion <code style="color:#ff0000">addf </code>berechnet, die
-      mit zwei Aufrufen das gleiche Ergebnis liefert, z.B. <code style="color:#ff0000">addf = applyf(add)</code>; <code
-        style="color:#ff0000">addf(x)(y)</code> soll <code style="color:#ff0000">add(x,y)</code> liefern.
-      Entsprechend<code style="color:#ff0000"> applyf(mul)(5)(6) soll 30</code> liefern, wenn mul die binäre
-      Multiplikation ist. </b></p>
+  <p><b>Schreiben Sie eine Addier-Funktion <code style="color:#ff0000">addf()</code>, so dass <code
+        style="color:#ff0000">addf(x)(y)</code> genau <code style="color:#ff0000">x + y </code>zurück gibt.
+      (Es haben also zwei Funktionsaufrufe zu erfolgen.<code style="color:#ff0000"> addf(x)</code> liefert
+      eine Funktion, die auf <code style="color:#ff0000">y</code> angewandt wird.) </b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
   <p>QUELLCODE:</p>
-  <pre>   function add(x,y)   
+  <pre>    function addf (x) &#123;
+return function (y) &#123;
 return x+y;
+&#125;
+&#125;
+</pre>
+  <p><b>Schreiben Sie eine Funktion <code style="color:#ff0000">applyf()</code>, die aus einer binären Funktion
+      wie <code style="color:#ff0000">add(x,y)</code> eine Funktion <code style="color:#ff0000">addf
+      </code>berechnet, die mit zwei Aufrufen das gleiche Ergebnis liefert, z.B. <code style="color:#ff0000">addf =
+        applyf(add)</code>; <code style="color:#ff0000">addf(x)(y)</code> soll
+      <code style="color:#ff0000">add(x,y)</code> liefern. Entsprechend<code style="color:#ff0000">
+        applyf(mul)(5)(6) soll 30</code> liefern, wenn mul die binäre Multiplikation ist. </b></p>
+  <p>Geben Sie den JavaScript-Quelltext an: </p>
+  <p>QUELLCODE: </p>
+  <pre>   function add(x,y) &#123;
+  return x+y;
+&#125;
 
+function mul(x,y) &#123;
+  return x*y;
+&#125;
 
-function mul(x,y)   
-return x*y;
-
-
-function applyf(f)  
-return function(x)  
-return function(y)  
+function applyf(f)&#123;
+return function(x)&#123;
+return function(y)&#123;
 return f(x,y);
-
-
-
+&#125;
+&#125;
+&#125;
 </pre>
 
   <p><b>Schreiben Sie eine Funktion curry() (von Currying), die eine binäre Funktion und ein Argument nimmt,
-      um daraus eine Funktion zu erzeugen, die ein zweites Argument entgegen nimmt, z.B. add3 = curry(add, 3);add3(4)
-      ergibt 7. curry(mul, 5)(6) ergibt 30. </b></p>
+      um daraus eine Funktion zu erzeugen, die ein zweites Argument entgegen nimmt, z.B. add3 = curry(add,
+      3);add3(4) ergibt 7. curry(mul, 5)(6) ergibt 30. </b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
-  <p>QUELLCODE:</p>
-  <pre>  function curry(f, x)  
-return function(y)  
+  <p>QUELLCODE: </p>
+  <pre>  function curry(f, x)&#123;
+return function(y)&#123;
 return f(x,y);
-
-
+&#125;
+&#125;
 </pre>
 
-  <p><b>Erzeugen Sie die inc-Funktion mit Hilfe einer der Funktionen addf, applyf und curry aus den letzten Aufgaben,
-      ohne die Funktion inc() selbst zu implementieren. (inc(x) soll immer x + 1 ergeben und lässt sich natürlich auch
-      direkt implementieren. Das ist aber hier nicht die Aufgabe.)
+  <p><b>Erzeugen Sie die inc-Funktion mit Hilfe einer der Funktionen addf, applyf und curry aus den letzten
+      Aufgaben, ohne die Funktion inc() selbst zu implementieren. (inc(x) soll immer x + 1 ergeben und lässt
+      sich natürlich auch direkt implementieren. Das ist aber hier nicht die Aufgabe.)
       Vielleicht schaffen Sie es auch, drei Varianten der inc()-Implementierung zu schreiben?</b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
-  <p>QUELLCODE:</p>
+  <p>QUELLCODE: </p>
   <pre>
-function curry(f, x)  
+function curry(f, x)&#123;
 return f(x,1) 
-
+&#125;
 </pre>
 
   <p><b>Schreiben Sie eine Funktion methodize(), die eine binäre Funktion (z.B. add, mul)
-      in eine unäre Methode verwandelt. Nach Number.prototype.add = methodize(add); soll (3).add(4) genau 7 ergeben.</b>
-  </p>
+      in eine unäre Methode verwandelt. Nach Number.prototype.add = methodize(add); soll (3).add(4) genau 7
+      ergeben.</b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
-  <p>QUELLCODE:</p>
+  <p>QUELLCODE: </p>
   <pre>
-function methodize(f)  
-return function(x)  
+function methodize(f)&#123;
+return function(x)&#123;
 return f(this,x);
-
-
+&#125;
+&#125;
 
 Number.prototype.add = methodize(add); 
 
@@ -96,100 +93,102 @@ console.log((3).add(4));
 </pre>
 
   <p><b>Schreiben Sie eine Funktion methodize(), die eine binäre Funktion (z.B. add, mul)
-      in eine unäre Methode verwandelt. Nach Number.prototype.add = methodize(add); soll (3).add(4) genau 7 ergeben.</b>
-  </p>
+      in eine unäre Methode verwandelt. Nach Number.prototype.add = methodize(add); soll (3).add(4) genau 7
+      ergeben.</b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
-  <p>QUELLCODE:</p>
-  <pre>function demethodize(f)   
-return (function(x, y)   
-return f(x, y);
-);
-
+  <p>QUELLCODE: </p>
+  <pre>function demethodize(f) &#123;
+return (function(x, y) &#123;
+  return f(x, y);
+&#125;);
+&#125;
 Number.prototype.add = add;
 console.log(demethodize(Number.prototype.add)(5, 6));
 </pre>
-  <p><b>Schreiben Sie eine Funktion twice(), die eine binäre Funktion in eine unäre Funktion umwandelt, die den einen
-      Parameter zweimal weiter reicht.
-      Z.B. var double = twice(add); double(11) soll 22 ergeben; var square = twice(mul); square(11) soll mul(11,11) ===
-      121 ergeben.</b></p>
+  <p><b>Schreiben Sie eine Funktion twice(), die eine binäre Funktion in eine unäre Funktion umwandelt, die den
+      einen Parameter zweimal weiter reicht.
+      Z.B. var double = twice(add); double(11) soll 22 ergeben; var square = twice(mul); square(11) soll
+      mul(11,11) === 121 ergeben.</b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
-  <p>QUELLCODE:</p>
-  <pre>function twice(f)   
-return (function(x)   
-return f(x,x);
-);
-
+  <p>QUELLCODE: </p>
+  <pre>function twice(f) &#123;
+return (function(x) &#123;
+  return f(x,x);
+&#125;);
+&#125;
 var double = twice(add);
 var square = twice(mul);
 console.log(double(11));
 console.log(square(11));
 </pre>
-  <p><b>Schreiben Sie eine Funktion composeu(), die zwei unäre Funktionen in eine einzelne unäre Funktion transformiert,
-      die beide nacheinander aufruft, z.B. soll composeu(double, square)(3) genau 36 ergeben.</b></p>
+  <p><b>Schreiben Sie eine Funktion composeu(), die zwei unäre Funktionen in eine einzelne unäre Funktion
+      transformiert, die beide nacheinander aufruft, z.B. soll composeu(double, square)(3) genau 36
+      ergeben.</b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
-  <p>QUELLCODE:</p>
-  <pre>function twice(f)   
-return (function(x)   
-return f(x,x);
-);
-
+  <p>QUELLCODE: </p>
+  <pre>function twice(f) &#123;
+return (function(x) &#123;
+  return f(x,x);
+&#125;);
+&#125;
 var double = twice(add);
 var square = twice(mul);
 
-function composeu(d,s)   
-return (function(x)   
-return s(d(x));
-);
-
+function composeu(d,s) &#123;
+return (function(x) &#123;
+  return s(d(x));
+&#125;);
+&#125;
 console.log(composeu(double, square)(3));
 
 </pre>
-  <p><b>Schreiben Sie eine Funktion composeb(), die zwei binäre Funktionen in eine einzelne Funktion transformiert, die
-      beide nacheinander aufruft, z.B. composeb(add, mul)(2, 3, 5) soll 25 ergeben.</b></p>
+  <p><b>Schreiben Sie eine Funktion composeb(), die zwei binäre Funktionen in eine einzelne Funktion
+      transformiert, die beide nacheinander aufruft, z.B. composeb(add, mul)(2, 3, 5) soll 25 ergeben.</b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
-  <p>QUELLCODE:</p>
-  <pre>function composeb(f,m)   
-return (function(a, b, c)   
-return m(c, f(b, a));
-);
-
+  <p>QUELLCODE: </p>
+  <pre>function composeb(f,m) &#123;
+return (function(a, b, c) &#123;
+  return m(c, f(b, a));
+&#125;);
+&#125;
 console.log(composeb(add, mul)(2, 3, 5));
 
 
 </pre>
-  <p><b>Schreiben Sie eine Funktion once(), die einer anderen Funktion nur einmal erlaubt, aufgerufen zu werden, z.B. a
-      dd_once = once(add); add_once(3, 4) soll beim ersten Mal 7 ergeben, beim zweiten Mal soll jedoch add_once(3, 4)
-      einen Fehlerabbruch bewirken.</b></p>
+  <p><b>Schreiben Sie eine Funktion once(), die einer anderen Funktion nur einmal erlaubt, aufgerufen zu werden,
+      z.B. a
+      dd_once = once(add); add_once(3, 4) soll beim ersten Mal 7 ergeben, beim zweiten Mal soll jedoch
+      add_once(3, 4) einen Fehlerabbruch bewirken.</b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
   <p>QUELLCODE:</p>
-  <pre>function once(f)   
+  <pre>function once(f) &#123;
 var check = false;
-return function(a,b)   
-if(check)   
-return ("Fehlerabbruch ");
-else   
-check=true;
-return f(a,b)
-
-
-
+return function(a,b) &#123;
+  if(check) &#123;
+    return ("Fehlerabbruch ");
+  &#125; else &#123;
+  check=true;
+  return f(a,b)
+  &#125;
+&#125;
+&#125;
 
 add_once = once(add);
 console.log(add_once(3, 4));
 console.log(add_once(3, 4));
 
 </pre>
-  <p><b>Schreiben Sie eine Fabrik-Funktion counterf(), die zwei Funktionen inc() und dec() berechnet, die einen Zähler
-      hoch- und herunterzählen. Z.B. counter = counterf(10);
+  <p><b>Schreiben Sie eine Fabrik-Funktion counterf(), die zwei Funktionen inc() und dec() berechnet, die einen
+      Zähler hoch- und herunterzählen. Z.B. counter = counterf(10);
       Dann soll counter.inc() 11 und counter.dec() wieder 10 ergeben.</b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
-  <p>QUELLCODE:</p>
-  <pre>function counterf(x)   
-return   
-inc: () =>    return ++x;   ,
-dec: () =>    return --x;   
-;
-
+  <p>QUELLCODE: </p>
+  <pre>function counterf(x) &#123;
+return &#123;
+  inc: () => &#123; return ++x; &#125;,
+  dec: () => &#123; return --x; &#125;
+&#125;;
+&#125;
 
 counter = counterf(10);
 
@@ -198,29 +197,29 @@ console.log(counter.dec());
 
 </pre>
   <p><b>Schreiben Sie eine rücknehmbare Funktion revocable(),
-      die als Parameter eine Funktion nimmt und diese bei Aufruf ausführt. Sobald die Funktion aber mit revoke() zurück
-      genommen wurde, führt ein erneuter Aufruf zu einem Fehler. Z.B.
+      die als Parameter eine Funktion nimmt und diese bei Aufruf ausführt. Sobald die Funktion aber mit
+      revoke() zurück genommen wurde, führt ein erneuter Aufruf zu einem Fehler. Z.B.
       <code style="color:#ff0000">temp = revocable(alert); <br>
         temp.invoke(7); // führt zu alert(7);<br>
         temp.revoke();<br>
         temp.invoke(8); // Fehlerabbruch!</code></b></p>
   <p>Geben Sie den JavaScript-Quelltext an: </p>
-  <p>QUELLCODE:</p>
-  <pre>function revocable(f)   
-return   
-isRevok: false,
-invoke: (a) =>   
-if(!this.isRevok)   
-f(a);
- else   
-return ("Sie Müssen revoke machen");
-
-,
-revoke: () =>   
-this.isRevok = true;
-
-;
-
+  <p>QUELLCODE: </p>
+  <pre>function revocable(f) &#123;
+return &#123;
+  isRevok: false,
+  invoke: (a) => &#123;
+    if(!this.isRevok) &#123;
+      f(a);
+    &#125; else &#123;
+      return ("Sie Müssen revoke machen");
+    &#125;
+  &#125;,
+  revoke: () => &#123;
+    this.isRevok = true;
+  &#125;
+&#125;;
+&#125;
 temp = revocable(add);
 temp.invoke(7); // führt zu alert(7);
 temp.revoke();
@@ -228,8 +227,8 @@ console.log(temp.invoke(8));
 
 </pre>
 
-  <p><b>Implementieren Sie ein "Array Wrapper"-Objekt mit den Methoden get, store und append, so dass ein Angreifer
-      keinen Zugriff auf das innere, private Array hat.
+  <p><b>Implementieren Sie ein "Array Wrapper"-Objekt mit den Methoden get, store und append, so dass ein
+      Angreifer keinen Zugriff auf das innere, private Array hat.
       <code style="color:#ff0000">
         my_vector = vector();<br>
         my_vector.append(7);<br>
@@ -239,20 +238,20 @@ console.log(temp.invoke(8));
 
   <p>Geben Sie den JavaScript-Quelltext an: </p>
   <p>QUELLCODE:</p>
-  <pre> function add(x, y)   
-return x+y;
-
-function mul(x, y)   
-return x*y;
-
-function vector()   
+  <pre> function add(x, y) &#123;
+  return x+y;
+&#125;
+function mul(x, y) &#123;
+  return x*y;
+&#125;
+function vector() &#123;
 let v=[];
-return   
-append:(x) =>    v.push(x);   ,
-store: (index,x) =>   v[index] = x;  , 
-get:(index) =>    return vec[index];   
-
-
+return &#123;
+  append:(x) => &#123; v.push(x); &#125;,
+  store: (index,x) => &#123;v[index] = x;&#125;, 
+  get:(index) => &#123; return vec[index]; &#125;
+&#125;
+&#125;
 
 my_vector = vector();
 my_vector.append(7);

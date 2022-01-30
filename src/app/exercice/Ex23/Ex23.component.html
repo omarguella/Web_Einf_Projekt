@@ -20,122 +20,122 @@
             in dieses Textfeld ein:
             <p><b>QUELLCODE:</b> </p>
             <pre>
-&lt;!DOCTYPE html>
+				&lt;!DOCTYPE html>
+				&lt;style>
+				.grandpa &#123;
+					width: 100%;
+					height: 100%;
+					left: 0;
+					top: 0;
+					overflow: hidden;
+					position: fixed;
+					background-color: #b2d6d1;
+				&#125; 
+				
+				.papa &#123;
+					left: 5%;
+					top: 11%;
+					width: 90%;
+					height: 100%;
+					position: fixed;
+					background-color: #F0FFFF;
+				&#125;
+				
+				.p0 &#123;
+					margin-top: 10px;
+					margin-left: 45%;
+					font-family: "Brush Script MT";
+					font-size: 40px;
+				&#125;
+				
+				.p1 &#123;
+					display : flex;
+					margin-top: 30px;
+					margin-left: 35%;
+					font-family: "Lucida Handwriting";
+					
+				&#125;
+				
+				td &#123;
+					height: 50px;
+				&#125;
+				
+				.left &#123;
+					text-align: right;
+					font-family: "Papyrus";
+					
+				&#125;
+				
+				.right &#123;
+					text-align: left;
+				&#125;
+				
+				table &#123;
+					display : flex;
+				
+					width: 80%;
+					margin-left: 10%;
+				&#125;
+				&lt;/style>
+				&lt;div class="grandpa">
+					&lt;p class="p0">Survey Form&lt;/p>
+					&lt;div class="papa">
+				
+						&lt;p class="p1">let us know how we can improve freeCodeCamp&lt;/p>
+						&lt;table>
+				
+							&lt;tr>
+								&lt;td class="left">*NAME&lt;/td>
+								&lt;td class="right">&lt;input type="name" id="w3review"  placeholder="Enter your name">&lt;/input>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td class="left">*Email&lt;/td>
+								&lt;td class="right">&lt;input type="name" id="w3review" placeholder="Enter your Email">&lt;/input>&lt;/td>
+				
+							&lt;/tr>
+							&lt;tr>
+								&lt;td class="left">*AGE &lt;/td>
+								&lt;td class="right">&lt;input type="number" id="quantity"
+									name="quantity" min="12" max="100"  placeholder="AGE">&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td class="left">Wich options best descripes your current role&lt;/td>
+								&lt;td class="right">&lt;select id="cars" name="cars">
+										&lt;option value="volvo">Student&lt;/option>
+										&lt;option value="saab">Mitarbeiter&lt;/option>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td class="left">How likely is that you would recommend
+									freeCodeCamp to a Friend&lt;/td>
+								&lt;td class="right">&lt;input type="radio" id="html"
+									name="fav_language" value="HTML"> &lt;label for="html">Defintely&lt;/label>&lt;br>
+									&lt;input type="radio" id="css" name="fav_language" value="CSS">
+									&lt;label for="css">Mabye&lt;/label>&lt;br> &lt;input type="radio"
+									id="javascript" name="fav_language" value="JavaScript"> &lt;label
+									for="javascript">Not Sure&lt;/label>&lt;br> &lt;br>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td class="left">What do you like moste in FCC&lt;/td>
+								&lt;td class="right">&lt;select id="cars" name="cars">
+										&lt;option value="volvo">Select an Option&lt;/option>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td class="left">Things that Should be improved in the future
+									(check all that apply)&lt;/td>
+								&lt;td class="right">&lt;input type="radio" id="html"
+									name="fav_language" value="HTML"> &lt;label for="html">Front-end
+										Projects&lt;/label>&lt;br> &lt;input type="radio" id="css" name="fav_language"
+									value="CSS"> &lt;label for="css">Back-end Projects&lt;/label>&lt;br>
+									&lt;input type="radio" id="javascript" name="fav_language"
+									value="JavaScript"> &lt;label for="javascript">Data
+										Visualization &lt;/label>&lt;br> &lt;br>&lt;/td>
+							&lt;/tr>
+						&lt;/table>
+					&lt;/div>
+				&lt;/div>
+				
+					</pre>
 
-&lt;style>
-.grandpa &#123;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	overflow: hidden;
-	position: fixed;
-	background-color: #b2d6d1;
-&#123; 
-
-.papa &#123;
-	left: 5%;
-	top: 11%;
-	width: 90%;
-	height: 100%;
-	position: fixed;
-	background-color: #F0FFFF;
-&#123;
-
-.p0 &#123;
-	margin-top: 10px;
-	margin-left: 45%;
-	font-family: "Brush Script MT";
-	font-size: 40px;
-&#123;
-
-.p1 &#123;
-	display : flex;
-	margin-top: 30px;
-	margin-left: 35%;
-	font-family: "Lucida Handwriting";
-	
-&#123;
-
-td &#123;
-	height: 50px;
-&#123;
-
-.left &#123;
-	text-align: right;
-	font-family: "Papyrus";
-	
-&#123;
-
-.right &#123;
-	text-align: left;
-&#123;
-
-table &#123;
-	display : flex;
-
-	width: 80%;
-	margin-left: 10%;
-&#123;
-&lt;/style>
-&lt;div class="grandpa">
-	&lt;p class="p0">Survey Form&lt;/p>
-	&lt;div class="papa">
-
-		&lt;p class="p1">let us know how we can improve freeCodeCamp&lt;/p>
-		&lt;table>
-
-			&lt;tr>
-				&lt;td class="left">*NAME&lt;/td>
-				&lt;td class="right">&lt;input type="name" id="w3review"  placeholder="Enter your name">&lt;/input>&lt;/td>
-			&lt;/tr>
-			&lt;tr>
-				&lt;td class="left">*Email&lt;/td>
-				&lt;td class="right">&lt;input type="name" id="w3review" placeholder="Enter your Email">&lt;/input>&lt;/td>
-
-			&lt;/tr>
-			&lt;tr>
-				&lt;td class="left">*AGE &lt;/td>
-				&lt;td class="right">&lt;input type="number" id="quantity"
-					name="quantity" min="12" max="100"  placeholder="AGE">&lt;/td>
-			&lt;/tr>
-			&lt;tr>
-				&lt;td class="left">Wich options best descripes your current role&lt;/td>
-				&lt;td class="right">&lt;select id="cars" name="cars">
-						&lt;option value="volvo">Student&lt;/option>
-						&lt;option value="saab">Mitarbeiter&lt;/option>&lt;/td>
-			&lt;/tr>
-			&lt;tr>
-				&lt;td class="left">How likely is that you would recommend
-					freeCodeCamp to a Friend&lt;/td>
-				&lt;td class="right">&lt;input type="radio" id="html"
-					name="fav_language" value="HTML"> &lt;label for="html">Defintely&lt;/label>&lt;br>
-					&lt;input type="radio" id="css" name="fav_language" value="CSS">
-					&lt;label for="css">Mabye&lt;/label>&lt;br> &lt;input type="radio"
-					id="javascript" name="fav_language" value="JavaScript"> &lt;label
-					for="javascript">Not Sure&lt;/label>&lt;br> &lt;br>&lt;/td>
-			&lt;/tr>
-			&lt;tr>
-				&lt;td class="left">What do you like moste in FCC&lt;/td>
-				&lt;td class="right">&lt;select id="cars" name="cars">
-						&lt;option value="volvo">Select an Option&lt;/option>&lt;/td>
-			&lt;/tr>
-			&lt;tr>
-				&lt;td class="left">Things that Should be improved in the future
-					(check all that apply)&lt;/td>
-				&lt;td class="right">&lt;input type="radio" id="html"
-					name="fav_language" value="HTML"> &lt;label for="html">Front-end
-						Projects&lt;/label>&lt;br> &lt;input type="radio" id="css" name="fav_language"
-					value="CSS"> &lt;label for="css">Back-end Projects&lt;/label>&lt;br>
-					&lt;input type="radio" id="javascript" name="fav_language"
-					value="JavaScript"> &lt;label for="javascript">Data
-						Visualization &lt;/label>&lt;br> &lt;br>&lt;/td>
-			&lt;/tr>
-		&lt;/table>
-	&lt;/div>
-&lt;/div>
-
-	</pre>
     </div>
   </div>
   <div class="rightpane">

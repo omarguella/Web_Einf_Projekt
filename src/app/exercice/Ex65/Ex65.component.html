@@ -16,18 +16,18 @@
       href="https://developer.mozilla.org/de/docs/Web/API/Console/assert" target="_blank">console.assert</a>. </p>
   <p>QUELLCODE:</p>
   <pre>
-	const struct =   
-    name: "omar",
-    vorname: "guella",
-    objekt:   
-        matrikel: ["student", 123]
-      
+    const struct = &#123;
+      name: "omar",
+      vorname: "guella",
+      objekt: &#123;
+          matrikel: ["student", 123]
+      &#125;
+  &#125;
+  const deepCopy = (struct) => &#123;
+      return Object.fromEntries(Object.entries(struct));
+  &#125;
+  const copy = deepCopy(struct);
   
-const deepCopy = (struct) =>   
-    return Object.fromEntries(Object.entries(struct));
-  
-const copy = deepCopy(struct);
-
-console.assert(struct === copy, "richtig copiert");
-console.assert(struct !== copy, "ACHTUNG nicht richtig copiert");
-	</pre>
+  console.assert(struct === copy, "richtig copiert");
+  console.assert(struct !== copy, "ACHTUNG nicht richtig copiert");
+    </pre>

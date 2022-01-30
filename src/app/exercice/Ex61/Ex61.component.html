@@ -37,7 +37,7 @@
             openEckigeKlammer: 0,
             openGeschweifteKlammer: 0,
         
-        &#123;;
+        &#125;;
         
         
         function check() &#123;
@@ -46,27 +46,27 @@
         
                 if (i == "(") &#123;
                     zeichen.openklamma++;
-                &#123;
+                &#125;
                 if (i == "&#123;") &#123;
                     zeichen.openGeschweifteKlammer++;
-                &#123;
+                &#125;
                 if (i == "[") &#123;
         
                     zeichen.openEckigeKlammer++;
-                &#123;
+                &#125;
         
                 if (i == ")") &#123;
                     zeichen.openklamma--;
-                &#123;
-                if (i == "&#123;") &#123;
+                &#125;
+                if (i == "&#125;") &#123;
         
                     zeichen.openGeschweifteKlammer--;
-                &#123;
+                &#125;
                 if (i == "]") &#123;
                     zeichen.openEckigeKlammer--;
-                &#123;
+                &#125;
         
-            &#123;
+            &#125;
         
             var s = (zeichen.openklamma + zeichen.openGeschweifteKlammer + zeichen.openEckigeKlammer) == 0;
         
@@ -74,9 +74,9 @@
         
             if (s == false) &#123;
                 document.getElementById("textarea").style="background-color:red;";
-            &#123;
+            &#125;
         
-        &#123;
+        &#125;
          
          
         
@@ -86,6 +86,7 @@
         &lt;/html>
         
           </pre>
+
     </div>
   </div>
   <div class="rightpane">

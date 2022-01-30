@@ -13,37 +13,37 @@
   <p>QUELLCODE:</p>
 
   <pre>&lt;!DOCTYPE html>
-&lt;html>
-
-&lt;head>
-
-    &lt;script>
-        var texta = fetch('A.txt');
-        var textb = fetch('B.txt');
-
-        Promise.all([
-            arrayA.then(x => x.text()).split("'\r\n"),
-            ArrayB.then(x => x.text()).split("'\r\n")
-        ]).then(() =>   
-            var maxlen = (arrayA.length >= arrayB.length) ? maxlen = arrayA.length : maxlen = arrayB.length;
-
-            for (var i = 0; i &lt; maxlen; i++)   
-                document.getElementById("feld").textContent += arrayA[i] + arrayB[i];
-              
-          );
-    &lt;/script>
-
-&lt;/head>
-
-&lt;body>
-    &lt;div>
-        &lt;h1>8.1. Promises&lt;/h1>
-        &lt;div id="feld">&lt;/div>
-
-    &lt;/div>
-
-&lt;/body>
-
-&lt;/html>
-
-	</pre>
+    &lt;html>
+    
+    &lt;head>
+    
+        &lt;script>
+            var texta = fetch('A.txt');
+            var textb = fetch('B.txt');
+    
+            Promise.all([
+                arrayA.then(x => x.text()).split("'\r\n"),
+                ArrayB.then(x => x.text()).split("'\r\n")
+            ]).then(() => &#123;
+                var maxlen = (arrayA.length >= arrayB.length) ? maxlen = arrayA.length : maxlen = arrayB.length;
+    
+                for (var i = 0; i &lt; maxlen; i++) &#123;
+                    document.getElementById("feld").textContent += arrayA[i] + arrayB[i];
+                &#125;
+            &#125;);
+        &lt;/script>
+    
+    &lt;/head>
+    
+    &lt;body>
+        &lt;div>
+            &lt;h1>8.1. Promises&lt;/h1>
+            &lt;div id="feld">&lt;/div>
+    
+        &lt;/div>
+    
+    &lt;/body>
+    
+    &lt;/html>
+    
+        </pre>

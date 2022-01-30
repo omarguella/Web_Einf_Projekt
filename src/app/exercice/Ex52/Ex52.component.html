@@ -36,6 +36,7 @@
         &lt;/body>&lt;/html>
             </pre>
 
+
       <p>Fügen Sie Ihren JavaScript-Quelltext aus der separaten Datei in das folgende Textarea ein:</p>
 
       <pre>let aktuTime , aktuIntervl , aktuButton;
@@ -69,61 +70,61 @@
                             newButton.onclick = stopTime(intervl ,newButton, Timer(timeCreat));
                             stopAll(Timer(timeCreat), newButton, intervl);
                             list.appendChild(redner);
-                    &#123; 
-                &#123;);
-            &#123; 
-        &#123;;
+                    &#125; 
+                &#125;);
+            &#125; 
+        &#125;;
         
         function Timer(time) &#123;
             let h = 0; let m = 0; let s = 0;
             function begin() &#123;
-                if (s == 59) &#123; s = 0; newMinute();&#123;
-                else &#123;++s; &#123;
+                if (s == 59) &#123; s = 0; newMinute();&#125;
+                else &#123;++s; &#125;
                 
-                htmlPut(); &#123;
+                htmlPut(); &#125;
             function newMinute() &#123;
                 if (m == 59) &#123;
                     m = 0;
                     ++h;
-                &#123; else &#123;
-                    ++m;&#123;
-                    &#123;
+                &#125; else &#123;
+                    ++m;&#125;
+                    &#125;
         
                 function htmlPut() &#123;
                 const timeString = numUmwandlung(h) + ":" + numUmwandlung(m) + ":" + numUmwandlung(s);
-                time.innerText = timeString;&#123;
+                time.innerText = timeString;&#125;
         
                 function numUmwandlung(num) &#123;
-                return ("0" + num).slice(-2); &#123;
+                return ("0" + num).slice(-2); &#125;
         
                 function getButton() &#123;
-                return button;&#123;
+                return button;&#125;
         
             return begin;
-        &#123;
+        &#125;
         
         function stopTime(intervl, button, timer) &#123;
             return function () &#123;
                 clearInterval(intervl);
                 button.innerText = "Start";
-                button.onclick = restartTimer(intervl, button, timer);&#123;;
+                button.onclick = restartTimer(intervl, button, timer);&#125;;
         
-        &#123;
+        &#125;
         
         function restartTimer(intervl, button, timer) &#123;
             return function () &#123;
                 intervl = setInterval(timer, 900);
                 stopAll( timer, button,intervl);
                 button.innerText = "Stopp";
-                button.onclick = stopTime(intervl, button, timer);&#123;;
-        &#123;
+                button.onclick = stopTime(intervl, button, timer);&#125;;
+        &#125;
         
         function stopAll( timer, button,intervl) &#123;
             if ( aktuTime != null && aktuButton != null && aktuIntervl != null ) &#123;
                 stopTime(aktuIntervl, aktuButton, aktuTime)();
-            &#123; 
+            &#125; 
             aktuButton = button; aktuIntervl = intervl; aktuTime = timer;
-        &#123;
+        &#125;
         
             </pre>
     </div>

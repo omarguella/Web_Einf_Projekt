@@ -17,9 +17,9 @@
             for (let i=2; i &lt; n; i++) &#123;
                 tabelle[i] = tabelle[i-1] + tabelle[i-2];
                 console.log(tabelle[i]);
-            &#123;
+            &#125;
             return tabelle;
-        &#123;
+        &#125;
         &lt;/script> 
         
         &lt;/head>
@@ -42,9 +42,9 @@
                         y=tabelle[i-1];
                         console.log( "the number is  " + y + "  and in der Folge  "+ i--); 
                         break;
-                    &#123;
-                &#123;  
-            &#123;
+                    &#125;
+                &#125;  
+            &#125;
             fibonacci(100);
             
             //the number is  8944394323791464  kommt in der Stelle 78
@@ -65,10 +65,10 @@
                         y=tabelle[i-1];
                         console.log( "the number is  " + y + "  kommt in der Folge  "+ i--); 
                         break;
-                    &#123;
-                &#123;
+                    &#125;
+                &#125;
                 
-            &#123;
+            &#125;
             fibonacci(1000);
             
             //the number is  1.3069892237633987e+308  kommt in der Stelle 1476</pre>
@@ -78,32 +78,31 @@
                     target="_blank">BigInt</a>, um alle 2000 Fibonacci-Zahlen korrekt anzuzeigen. Geben Sie hier HTML-
                   und JavaScript-Code zusammen ein: </b></p>
               <pre>&lt;!DOCTYPE html>
-                    &lt;html>
-                    &lt;head>
-                    &lt;meta charset="ISO-8859-1">
-                    &lt;title>Insert title here&lt;/title>
-                    &lt;script>
-                    function fibonacci(n) &#123;
-                        var tabelle = [BigInt(1),BigInt(1)]
-                     
-                        for ( i=2; i &lt; n; i++) &#123;
-                            tabelle[i] = BigInt(tabelle[i-1]) + BigInt(tabelle[i-2]);
-                                    console.log(tabelle[i]);
-                    
-                     
-                        &#123;
-                        
-                    &#123;
-                    
-                    
-                    &lt;/script> 
-                    
-                    &lt;/head>
-                    &lt;body >
-                        &lt;button type ="button" onclick="fibonacci(2000)"> OUTPUT &lt;/button>
-                    &lt;/body>
-                    &lt;/html></pre>
-
+            &lt;html>
+            &lt;head>
+            &lt;meta charset="ISO-8859-1">
+            &lt;title>Insert title here&lt;/title>
+            &lt;script>
+            function fibonacci(n) &#123;
+                var tabelle = [BigInt(1),BigInt(1)]
+             
+                for ( i=2; i &lt; n; i++) &#123;
+                    tabelle[i] = BigInt(tabelle[i-1]) + BigInt(tabelle[i-2]);
+                            console.log(tabelle[i]);
+            
+             
+                &#125;
+                
+            &#125;
+            
+            
+            &lt;/script> 
+            
+            &lt;/head>
+            &lt;body >
+                &lt;button type ="button" onclick="fibonacci(2000)"> OUTPUT &lt;/button>
+            &lt;/body>
+            &lt;/html></pre>
               <p><b>Optional: Was ist die größte Fibonacci-Zahl, die Sie mit<code> BigInt </code>korrekt berechnet
                   haben? An welcher Stelle in der Fibonacci-Folge steht diese? </b></p>
               <pre>the number is  8944394323791464n  kommt in der Stelle 78 </pre>

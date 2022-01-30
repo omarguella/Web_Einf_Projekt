@@ -50,36 +50,36 @@
         for (var k = 0; k &lt; array.length; k++) &#123;
             if (Knoten.indexOf(array[k][0]) &lt; 0) Knoten.push(array[k][0]);
             if (Knoten.indexOf(array[k][1]) &lt; 0) Knoten.push(array[k][1]);
-        &#123;
+        &#125;
     
         Knoten.forEach(function (knote) &#123;
             if (gesehen.indexOf(knote) &lt; 0) &#123;
                 sort(knote);
-            &#123;
-        &#123;);
+            &#125;
+        &#125;);
     
         function sort(knote) &#123;
             gesehen.push(knote);
             array.forEach(function (Kante) &#123;
                 if (gesehen.indexOf(Kante[1]) &lt; 0 && Kante[0] == knote) &#123;
                     sort(Kante[1]);
-                &#123;
-            &#123;);
+                &#125;
+            &#125;);
             pack.push(knote);
-        &#123;
+        &#125;
         return pack.reverse();
-    &#123;
+    &#125;
     
     class Vorrang &#123;
         [Symbol.iterator]() &#123;
             return this.array.values()
-        &#123;
+        &#125;
         constructor(array) &#123;
             this.array = topsort(array);
-        &#123;
+        &#125;
     
     
-    &#123;
+    &#125;
     
     
     function check() &#123;
@@ -91,7 +91,7 @@
             var array = text.split(",").map(String);
             if ((array.length % 2) != 0) &#123;
                 throw new Error(' Geben Sie bitte eine Komplette Vorrangrelationen');
-            &#123;
+            &#125;
     
             var gfg = new Array(array.length / 2);
     
@@ -99,7 +99,7 @@
             // Loop to create 2D array using 1D array
             for (var i = 0; i &lt; gfg.length; i++) &#123;
                 gfg[i] = new Array(2);
-            &#123;
+            &#125;
     
             var h = 0;
     
@@ -107,23 +107,23 @@
             for (let i = 0; i &lt; array.length / 2; i++) &#123;
                 for (let j = 0; j &lt; 2; j++) &#123;
                     gfg[i][j] = array[h++];
-                &#123;
-            &#123;
+                &#125;
+            &#125;
     
             const studentenLeben = new Vorrang(gfg);
     
             var final = [];
             for (const next of studentenLeben) &#123;
                 final.push(next);
-            &#123;
+            &#125;
     
             console.log(final);
     
-        &#123; catch (err) &#123;
+        &#125; catch (err) &#123;
     
             console.log(err.message);
-        &#123;
-    &#123;
+        &#125;
+    &#125;
     //RUN
     check()
     
@@ -137,15 +137,15 @@
         var arrayfinal = [];
         for (const next of array) &#123;
             arrayfinal.push(next);
-        &#123;
+        &#125;
         var ausgabe= ["schlafen", "essen", "studieren", "prüfen"];
         for (let i = 0; i &lt; arrayfinal.length; i++) &#123;
     
-            console.assert(ausgabe[i] === arrayfinal[i], `diese beide Werte $&#123;ausgabe[i]&#123; und $&#123;arrayfinal[i]&#123; sind nicht gleich`);
-        &#123;
-    &#123;
+            console.assert(ausgabe[i] === arrayfinal[i], `diese beide Werte $&#123;ausgabe[i]&#125; und $&#123;arrayfinal[i]&#125; sind nicht gleich`);
+        &#125;
+    &#125;
     test()
-      </pre>
+        </pre>
 
       <p>Betten Sie Ihren ECMAScript-Code in eine Webseite ein, so dass man die Vorrangrelation dort eingeben kann.
         Geben
@@ -186,36 +186,36 @@
             for (var k = 0; k &lt; array.length; k++) &#123;
                 if (Knoten.indexOf(array[k][0]) &lt; 0) Knoten.push(array[k][0]);
                 if (Knoten.indexOf(array[k][1]) &lt; 0) Knoten.push(array[k][1]);
-            &#123;
+            &#125;
         
             Knoten.forEach(function (knote) &#123;
                 if (gesehen.indexOf(knote) &lt; 0) &#123;
                     sort(knote);
-                &#123;
-            &#123;);
+                &#125;
+            &#125;);
         
             function sort(knote) &#123;
                 gesehen.push(knote);
                 array.forEach(function (Kante) &#123;
                     if (gesehen.indexOf(Kante[1]) &lt; 0 && Kante[0] == knote) &#123;
                         sort(Kante[1]);
-                    &#123;
-                &#123;);
+                    &#125;
+                &#125;);
                 pack.push(knote);
-            &#123;
+            &#125;
             return pack.reverse();
-        &#123;
+        &#125;
         
         class Vorrang &#123;
             [Symbol.iterator]() &#123;
                 return this.array.values()
-            &#123;
+            &#125;
             constructor(array) &#123;
                 this.array = topsort(array);
-            &#123;
+            &#125;
         
         
-        &#123;
+        &#125;
         
         
         function check() &#123;
@@ -227,7 +227,7 @@
                 var array = text.split(",").map(String);
                 if ((array.length % 2) != 0) &#123;
                     throw new Error(' Geben Sie bitte eine Komplette Vorrangrelationen');
-                &#123;
+                &#125;
         
                 var gfg = new Array(array.length / 2);
         
@@ -235,7 +235,7 @@
                 // Loop to create 2D array using 1D array
                 for (var i = 0; i &lt; gfg.length; i++) &#123;
                     gfg[i] = new Array(2);
-                &#123;
+                &#125;
         
                 var h = 0;
         
@@ -243,26 +243,26 @@
                 for (var i = 0; i &lt; array.length / 2; i++) &#123;
                     for (var j = 0; j &lt; 2; j++) &#123;
                         gfg[i][j] = array[h++];
-                    &#123;
-                &#123;
+                    &#125;
+                &#125;
         
                 const studentenLeben = new Vorrang(gfg);
         
                 var final = [];
                 for (const next of studentenLeben) &#123;
                     final.push(next);
-                &#123;
-            
-            //test
-            test();
+                &#125;
+                
+                //test
+                test();
         
                 document.getElementById("textarea2").value=final;
         
-            &#123; catch (err) &#123;
+            &#125; catch (err) &#123;
         
                 document.getElementById("textarea2").value=err.message;
-            &#123;
-        &#123;
+            &#125;
+        &#125;
         
         //test
         function test() &#123;
@@ -274,13 +274,13 @@
             var arrayfinal = [];
             for (const next of array) &#123;
                 arrayfinal.push(next);
-            &#123;
+            &#125;
            var ausgabe = ["schlafen", "essen", "studieren", "prüfen"];
             for (let i = 0; i &lt; arrayfinal.length; i++) &#123;
         
-                console.assert(ausgabe[i] === arrayfinal[i], `diese beide Werte $&#123;ausgabe[i]&#123; und $&#123;arrayfinal[i]&#123; sind nicht gleich`);
-            &#123;
-        &#123;
+                console.assert(ausgabe[i] === arrayfinal[i], `diese beide Werte $&#123;ausgabe[i]&#125; und $&#123;arrayfinal[i]&#125; sind nicht gleich`);
+            &#125;
+        &#125;
         
         
         &lt;/script>

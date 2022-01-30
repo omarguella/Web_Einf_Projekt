@@ -9,25 +9,25 @@
     function Person(name, autos) &#123;
         this.name = name;
         this.autos = autos;
-    &#123;
+    &#125;
     
     function Auto(matrikel) &#123;
         this.matrikel = matrikel;
-    &#123;
+    &#125;
     
     function conflict(listPersons, auto) &#123;
         var besitzer = 0;
         listPersons.forEach((per)=>&#123;
            if (per.autos.includes(auto.matrikel)) &#123;
                besitzer++;
-           &#123;
-        &#123;)  
+           &#125;
+        &#125;)  
     
         if(besitzer > 1) 
         console.log("Das Auto mit der kennzeichen "+ auto.matrikel + " hat Mehrere besitzer");
         else
          console.log("Das Auto mit der kennzeichen "+ auto.matrikel + "  hat ein oder kein besitzer");
-    &#123;
+    &#125;
     
     var persons = [new Person("omar", ["11", "10", "12"]), new Person("guella", ["11", "2", "3"])]
     var auto = new Auto("11");
@@ -35,5 +35,5 @@
     conflict(persons, auto);
     
     
-    &#123;
+    &#125;
         </pre>

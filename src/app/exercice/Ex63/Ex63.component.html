@@ -11,149 +11,145 @@
 
 
 
-      <pre>* [Symbol.iterator]()   
-    for(const arrayElem of this.array)  
-        yield arrayElem;
-     
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-
-&lt;/head>
-&lt;body>
-
-
-&lt;h1>Geben Sie Bitte eine Vorrangrelationen in Dieser Schreibweise  :&lt;br>
-   schlafen,studieren,essen,studieren,studieren,prüfen&lt;/h1>
-&lt;br>
-
-
-&lt;textarea id="textarea" rows="4" cols="50" placeholder="write your Text and please use some nested brackets" >
-&lt;/textarea>
-
-&lt;button class="button" onclick = check() >check Text&lt;/button>
-
-&lt;br>
-
-&lt;textarea id="textarea2" rows="4" cols="50" placeholder="your result" >
-&lt;/textarea>
-&lt;script>
-
-function topsort(array)   
-
-
-var Knoten = [];
-var pack = [];
-var gesehen = [];
-
-for (var k = 0; k &lt; array.length; k++)   
-if (Knoten.indexOf(array[k][0]) &lt; 0) Knoten.push(array[k][0]);
-if (Knoten.indexOf(array[k][1]) &lt; 0) Knoten.push(array[k][1]);
-  
-
-Knoten.forEach(function (knote)   
-if (gesehen.indexOf(knote) &lt; 0)   
-    sort(knote);
-  
-  );
-
-function sort(knote)   
-gesehen.push(knote);
-array.forEach(function (Kante)   
-    if (gesehen.indexOf(Kante[1]) &lt; 0 && Kante[0] == knote)   
-        sort(Kante[1]);
-      
-  );
-pack.push(knote);
-  
-return pack.reverse();
-  
-
-class Vorrang   
-//GENERATOR
-*[Symbol.iterator]()   
-    for(const arrayElem of this.array)  
-        yield arrayElem;
-      
-  
-constructor(array)   
-this.array = topsort(array);
-  
-
-
-  
-
-
-function check()   
-try   
-
-var text= document.getElementById("textarea").value;
-console.log(text);
-
-var array = text.split(",").map(String);
-if ((array.length % 2) != 0)   
-    throw new Error(' Geben Sie bitte eine Komplette Vorrangrelationen');
-  
-
-var gfg = new Array(array.length / 2);
-
-
-// Loop to create 2D array using 1D array
-for (var i = 0; i &lt; gfg.length; i++)   
-    gfg[i] = new Array(2);
-  
-
-var h = 0;
-
-// Loop to initialize 2D array elements.
-for (var i = 0; i &lt; array.length / 2; i++)   
-    for (var j = 0; j &lt; 2; j++)   
-        gfg[i][j] = array[h++];
-      
-  
-
-const studentenLeben = new Vorrang(gfg);
-
-var final = [];
-for (const next of studentenLeben)   
-    final.push(next);
-  
-
-//test
-test();
-
-document.getElementById("textarea2").value=final;
-
-   catch (err)   
-
-document.getElementById("textarea2").value=err.message;
-  
-  
-
-//test
-function test()   
-const array = new Vorrang([
-["schlafen", "studieren"],
-["essen", "studieren"],
-["studieren", "prüfen"]
-]);
-var arrayfinal = [];
-for (const next of array)   
-arrayfinal.push(next);
-  
-var ausgabe = ["schlafen", "essen", "studieren", "prüfen"];
-for (let i = 0; i &lt; arrayfinal.length; i++)   
-
-console.assert(ausgabe[i] === arrayfinal[i], `diese beide Werte $  ausgabe[i]   und $  arrayfinal[i]   sind nicht gleich`);
-  
-  
-
-
-&lt;/script>
-
-&lt;/body>
-&lt;/html>
-</pre>
+      <pre>&lt;!DOCTYPE html>
+        &lt;html>
+        &lt;head>
+        
+        &lt;/head>
+        &lt;body>
+        
+        
+        &lt;h1>Geben Sie Bitte eine Vorrangrelationen in Dieser Schreibweise  :&lt;br>
+                   schlafen,studieren,essen,studieren,studieren,prüfen&lt;/h1>
+        &lt;br>
+        
+        
+        &lt;textarea id="textarea" rows="4" cols="50" placeholder="write your Text and please use some nested brackets" >
+        &lt;/textarea>
+        
+          &lt;button class="button" onclick = check() >check Text&lt;/button>
+        
+        &lt;br>
+        
+        &lt;textarea id="textarea2" rows="4" cols="50" placeholder="your result" >
+        &lt;/textarea>
+         &lt;script>
+        
+        function topsort(array) &#123;
+        
+        
+            var Knoten = [];
+            var pack = [];
+            var gesehen = [];
+        
+            for (var k = 0; k &lt; array.length; k++) &#123;
+                if (Knoten.indexOf(array[k][0]) &lt; 0) Knoten.push(array[k][0]);
+                if (Knoten.indexOf(array[k][1]) &lt; 0) Knoten.push(array[k][1]);
+            &#125;
+        
+            Knoten.forEach(function (knote) &#123;
+                if (gesehen.indexOf(knote) &lt; 0) &#123;
+                    sort(knote);
+                &#125;
+            &#125;);
+        
+            function sort(knote) &#123;
+                gesehen.push(knote);
+                array.forEach(function (Kante) &#123;
+                    if (gesehen.indexOf(Kante[1]) &lt; 0 && Kante[0] == knote) &#123;
+                        sort(Kante[1]);
+                    &#125;
+                &#125;);
+                pack.push(knote);
+            &#125;
+            return pack.reverse();
+        &#125;
+        
+        class Vorrang &#123;
+            //GENERATOR
+            *[Symbol.iterator]() &#123;
+                    for(const arrayElem of this.array)&#123;
+                        yield arrayElem;
+                    &#125;
+                &#125;
+            constructor(array) &#123;
+                this.array = topsort(array);
+            &#125;
+        
+        
+        &#125;
+        
+        
+        function check() &#123;
+            try &#123;
+        
+                var text= document.getElementById("textarea").value;
+                console.log(text);
+        
+                var array = text.split(",").map(String);
+                if ((array.length % 2) != 0) &#123;
+                    throw new Error(' Geben Sie bitte eine Komplette Vorrangrelationen');
+                &#125;
+        
+                var gfg = new Array(array.length / 2);
+        
+        
+                // Loop to create 2D array using 1D array
+                for (var i = 0; i &lt; gfg.length; i++) &#123;
+                    gfg[i] = new Array(2);
+                &#125;
+        
+                var h = 0;
+        
+                // Loop to initialize 2D array elements.
+                for (var i = 0; i &lt; array.length / 2; i++) &#123;
+                    for (var j = 0; j &lt; 2; j++) &#123;
+                        gfg[i][j] = array[h++];
+                    &#125;
+                &#125;
+        
+                const studentenLeben = new Vorrang(gfg);
+        
+                var final = [];
+                for (const next of studentenLeben) &#123;
+                    final.push(next);
+                &#125;
+                
+                //test
+                test();
+        
+                document.getElementById("textarea2").value=final;
+        
+            &#125; catch (err) &#123;
+        
+                document.getElementById("textarea2").value=err.message;
+            &#125;
+        &#125;
+        
+        //test
+        function test() &#123;
+            const array = new Vorrang([
+                ["schlafen", "studieren"],
+                ["essen", "studieren"],
+                ["studieren", "prüfen"]
+            ]);
+            var arrayfinal = [];
+            for (const next of array) &#123;
+                arrayfinal.push(next);
+            &#125;
+            var ausgabe = ["schlafen", "essen", "studieren", "prüfen"];
+            for (let i = 0; i &lt; arrayfinal.length; i++) &#123;
+        
+                console.assert(ausgabe[i] === arrayfinal[i], `diese beide Werte $&#123;ausgabe[i]&#125; und $&#123;arrayfinal[i]&#125; sind nicht gleich`);
+            &#125;
+        &#125;
+        
+        
+        &lt;/script>
+        
+        &lt;/body>
+        &lt;/html>
+            </pre>
     </div>
   </div>
   <div class="rightpane">

@@ -13,89 +13,89 @@
       href="https://developer.mozilla.org/de/docs/Web/API/Console/assert" target="_blank">console.assert</a>. </p>
   <p><b>QUELLCODE:</b></p>
   <pre>
-	function topsort(array)   
+	function topsort(array) &#123;
 
 
     var Knoten = [];
     var pack = [];
     var gesehen = [];
 
-    for (var k = 0; k &lt; array.length; k++)   
+    for (var k = 0; k &lt; array.length; k++) &#123;
         if (Knoten.indexOf(array[k][0]) &lt; 0) Knoten.push(array[k][0]);
         if (Knoten.indexOf(array[k][1]) &lt; 0) Knoten.push(array[k][1]);
-      
+    &#125;
 
-    Knoten.forEach(function (knote)   
-        if (gesehen.indexOf(knote) &lt; 0)   
+    Knoten.forEach(function (knote) &#123;
+        if (gesehen.indexOf(knote) &lt; 0) &#123;
             sort(knote);
-          
-      );
+        &#125;
+    &#125;);
 
-    function sort(knote)   
+    function sort(knote) &#123;
         gesehen.push(knote);
-        array.forEach(function (Kante)   
-            if (gesehen.indexOf(Kante[1]) &lt; 0 && Kante[0] == knote)   
+        array.forEach(function (Kante) &#123;
+            if (gesehen.indexOf(Kante[1]) &lt; 0 && Kante[0] == knote) &#123;
                 sort(Kante[1]);
-              
-          );
+            &#125;
+        &#125;);
         pack.push(knote);
-      
+    &#125;
     return pack.reverse();
-  
+&#125;
 
-class Vorrang   
-    [Symbol.iterator]()   
+class Vorrang &#123;
+    [Symbol.iterator]() &#123;
         return this.array.values()
-      
-    constructor(array)   
+    &#125;
+    constructor(array) &#123;
         this.array = topsort(array);
-      
+    &#125;
 
 
-  
+&#125;
 
 
 
-try   
+try &#123;
 
     var text = "schlafen,studieren,essen,studieren,studieren,prüfen";
     console.log(text);
 
     var array = text.split(",").map(String);
-    if ((array.length % 2) != 0)   
+    if ((array.length % 2) != 0) &#123;
         throw new Error(' Geben Sie bitte eine Komplette Vorrangrelationen');
-      
+    &#125;
 
     var gfg = new Array(array.length / 2);
 
 
     // Loop to create 2D array using 1D array
-    for (var i = 0; i &lt; gfg.length; i++)   
+    for (var i = 0; i &lt; gfg.length; i++) &#123;
         gfg[i] = new Array(2);
-      
+    &#125;
 
     var h = 0;
 
     // Loop to initialize 2D array elements.
-    for (let i = 0; i &lt; array.length / 2; i++)   
-        for (let j = 0; j &lt; 2; j++)   
+    for (let i = 0; i &lt; array.length / 2; i++) &#123;
+        for (let j = 0; j &lt; 2; j++) &#123;
             gfg[i][j] = array[h++];
-          
-      
+        &#125;
+    &#125;
 
     const studentenLeben = new Vorrang(gfg);
 
     var final = [];
-    for (const next of studentenLeben)   
+    for (const next of studentenLeben) &#123;
         final.push(next);
-      
+    &#125;
 
     console.log(final);
 
-   catch (err)   
+&#125; catch (err) &#123;
 
     console.log(err.message);
-  
+&#125;
 
 
 
@@ -113,32 +113,32 @@ const arrayTest = new Vorrang([
     ["studieren", "prüfen"]
 ]);
 var arrayfinal = [];
-for (const next of arrayTest)   
+for (const next of arrayTest) &#123;
     arrayfinal.push(next);
-  
+&#125;
 var ausgabe = ["schlafen", "essen", "studieren", "prüfen"];
-for (let i = 0; i &lt; arrayfinal.length; i++)   
+for (let i = 0; i &lt; arrayfinal.length; i++) &#123;
 
-    console.assert(ausgabe[i] === arrayfinal[i], `diese beide Werte $  ausgabe[i]   und $  arrayfinal[i]   sind nicht gleich`);
-  
+    console.assert(ausgabe[i] === arrayfinal[i], `diese beide Werte $&#123;ausgabe[i]&#125; und $&#123;arrayfinal[i]&#125; sind nicht gleich`);
+&#125;
 
 
 //Proxy
 
-const generator = new Proxy(studentenLeben.gen,   
-    apply(target, thisArg, argumentList)   
+const generator = new Proxy(studentenLeben.gen, &#123;
+    apply(target, thisArg, argumentList) &#123;
         console.log(studentenLeben.getSize());
         return target(studentenLeben);
-      
-  );
+    &#125;
+&#125;);
 
-while (true)   
+while (true) &#123;
     tab = generator().next();
-    if (tab["done"] !== false)   
+    if (tab["done"] !== false) &#123;
         break;
-      
+    &#125;
     console.assert(final.includes(out["value"]));
     console.assert(ausgabe[0] === out["value"]);
     testArraySequence.splice(0, 1);
-   
+&#125; 
 	</pre>

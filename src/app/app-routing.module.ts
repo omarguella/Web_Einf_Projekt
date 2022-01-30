@@ -32,7 +32,6 @@ import { Ex14Component } from './exercice/Ex14/Ex14.component';
 import { Ex13Component } from './exercice/Ex13/Ex13.component';
 import { Ex12Component } from './exercice/Ex12/Ex12.component';
 import { Sheet1Ex1Component } from './exercice/sheet1Ex1/sheet1Ex1.component';
-import { ProfilComponent } from './profil/profil.component';
 import { ExerciceComponent } from './exercice/exercice.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';

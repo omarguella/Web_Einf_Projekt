@@ -10,81 +10,102 @@
       <img src="https://kaul.inf.h-brs.de/we/assets/img/holy-grail1.png" style="max-width:400px;width:100%">
       <p><b>QUELLCODE:</b> </p>
       <pre> &lt;!DOCTYPE html>
-        &lt;html lang="en">
+        &lt;html>
         &lt;head>
-        &lt;meta charset="UTF-8">
+        &lt;meta charset="ISO-8859-1">
+        &lt;title>Insert title here&lt;/title>
         &lt;/head>
+        &lt;style>
         
+        *, ::after, ::before &#123;
+          box-sizing: border-box;
+        &#125;
+        
+         
+        
+        .container &#123;
+          
+          max-width: 1400px; 
+          display: flex;
+          flex-wrap: wrap;
+        &#125;
+        
+        .column &#123;
+          --columns: 12; 
+        
+          --width: 0; 
             
-            &lt;style>
-               header &#123; 
-                   grid-area: header;
-                   background-color: red;
-                &#123;
+          border: LavenderBlush 5px solid;
+          border-radius: 20px;
+          padding: 16px;
+          flex-basis: calc(var(--width) / var(--columns) * 100%);
+        &#125;
         
-               main &#123; 
-                   grid-area: main;
-                   background-color: blue;
-                &#123;
+        @media screen and (max-width: 800px) &#123;
+           aside.rechts &#123; --width: 12; height: 10rem; &#125;
+           nav.nav &#123;  --width: 10;   &#125;
+              main.links &#123;  --width: 2;   &#125;
+           
+           &#125;
+          
+        @media screen and (max-width:600px) &#123;
+           nav.nav &#123; --width: 12;  &#125;
+           main.links &#123; --width:6; height:20rem; &#125;
+           aside.rechts &#123; --width:6; height:20rem; &#125;
+           nav.nav &#123; order: 1; &#125;
+           main.links &#123; order: 2; &#125;
+           aside.rechts &#123; order: 3; &#125;
+           
+        &#125;
         
-               aside.left &#123; 
-                   grid-area: left;
-                   background-color: lightgreen; 
-                &#123;
         
-               aside.right &#123; 
-                   grid-area: right; 
-                   background-color: pink; 
-                &#123;
+        .header &#123;
+          --width: 12;
+            height: 8rem;
+            background-color: red;
+          
+        &#125;
         
-                .body &#123;
-                        display: grid;
-                        min-height: 100vh;
-                        height: 100vh;
-                        grid-template-areas:
-                                      "header"
-                                      "left"
-                                      "main"
-                                      "main"
-                                      "right";
-                &#123;
+        .links &#123;
+          --width: 2.5;
+          height: 64rem;
+            background-color: pink;
+          
+        &#125;
         
-               
+        .nav &#123;
+          --width: 7;
+              background-color: blue;
+            height: 64rem;
+          
+        &#125;
         
-                @media screen and (min-width: 500px) &#123;
-                  .body &#123;
-                  display: grid;
-                  grid-template-areas: "header header"
-                                       "left main "
-                                         "right right"
-                                         ;
-                  grid-template-columns: 1fr 2fr;
-                  grid-template-rows: 150px 1fr 100px 30px;
-                &#123;
-                
-            &#123; 
+        .rechts &#123;
+          --width: 2.5;
+             background-color: lightgreen ;
+            height: 64rem;
+          
+        &#125;
         
-                @media screen and (min-width: 800px) &#123;
-                  .body &#123;
-                  display: grid;
-                  grid-template-areas: "header header header"
-                                       "left main right";
-                  grid-template-columns: 150px 1fr 150px;
-                  grid-template-rows: 100px 1fr 30px;
-                &#123;
-            &#123;
         
-                
-            &lt;/style>
+        
+        &lt;/style>
+        
+        &lt;body>
+        
+        
+          &lt;div class="container">
+            &lt;header class="header column">  &lt;/header>
+            &lt;main class="links column">  &lt;/main>
+                &lt;nav class="nav column">  &lt;/nav>
             
-                &lt;body class="body">
-                &lt;header >&lt;/header>
-                &lt;main >&lt;/main>
-                &lt;aside class="left">&lt;/aside>
-                &lt;aside class="right">&lt;/aside>
-            &lt;/body>
+            &lt;aside class="rechts column">&lt;/aside>
+          &lt;/div>
+        
+        
+        &lt;/body>
         &lt;/html>
-	</pre>
+          </pre>
     </div>
   </div>
   <div class="rightpane">
