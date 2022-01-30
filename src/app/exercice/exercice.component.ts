@@ -23,7 +23,7 @@ export class ExerciceComponent implements OnInit {
 
   ngOnInit() {
     this.sheet1 = true;
-    this._router.navigate(['exercice/sheet1Ex1']);
+    this._router.navigate(['exercice/aboutMe']);
   }
 
   sheet1clicked() {

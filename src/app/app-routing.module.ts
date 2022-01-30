@@ -1,3 +1,4 @@
+import { AboutMeComponent } from './exercice/aboutMe/aboutMe.component';
 import { Ex33Component } from './exercice/Ex33/Ex33.component';
 import { Ex65Component } from './exercice/Ex65/Ex65.component';
 import { Ex112Component } from './exercice/Ex112/Ex112.component';
@@ -37,8 +38,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {path: '' , component: ProfilComponent },
+  {path: '' , component: ExerciceComponent },
   {path: 'exercice' , component: ExerciceComponent,  children :[
+    {path: 'aboutMe' , component: AboutMeComponent },
     {path: 'sheet1Ex1' , component: Sheet1Ex1Component },
     {path: 'Ex12' , component: Ex12Component },
     {path: 'Ex13' , component: Ex13Component },

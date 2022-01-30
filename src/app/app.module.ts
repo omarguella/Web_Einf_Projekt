@@ -1,3 +1,4 @@
+import { AboutMeComponent } from './exercice/aboutMe/aboutMe.component';
 import { Ex65Component } from './exercice/Ex65/Ex65.component';
 import { Ex112Component } from './exercice/Ex112/Ex112.component';
 import { Ex111Component } from './exercice/Ex111/Ex111.component';
@@ -42,6 +43,7 @@ import { SolutionComponent } from './solution/solution.component';
 import { BodyComponent } from './body/body.component';
 import { Ex32Component } from './exercice/Ex32/Ex32.component';
 import { Ex52Component } from './exercice/Ex52/Ex52.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [						
@@ -85,11 +87,13 @@ import { Ex52Component } from './exercice/Ex52/Ex52.component';
       Ex103Component,
       Ex111Component,
       Ex112Component,
+      AboutMeComponent
 
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

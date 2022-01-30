@@ -1,11 +1,10 @@
 .container {
   width: 100%;
   height: 100%;
-
 }
 
 .middlepane {
-  width: 64%;
+  width: 74%;
   height: 100%;
   position: relative;
   float: left;
@@ -14,10 +13,11 @@
 }
 
 .rightpane {
-  width: 35%;
+  width: 25%;
   height: 100%;
   position: relative;
   float: right;
+
 
 }
 
