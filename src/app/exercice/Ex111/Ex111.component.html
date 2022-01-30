@@ -1,13 +1,17 @@
-<div id="aufgabe">
-  <h1>11.1 Registrierung mit PHP</h1>
-  <p><b>Erstellen Sie mit PHP 5 auf www2.inf.h-brs.de ein Registrierungsformular. Speichern Sie die eingegebenen Daten
-      persistent in einer Datei auf www2.inf.h-brs.de. Schreiben Sie Ihre PHP-Scripte so,
-      dass es zu keinen<a href="https://de.wikipedia.org/wiki/Wettlaufsituation" target="_blank">
-        Nebenläufigkeitsartefakten</a> (z.B.<a href="https://de.wikipedia.org/wiki/Verlorenes_Update" target="_blank">
-        Lost Update </a>) kommen kann, egal wie viele Nutzer sich gleichzeitig registrieren. </b></p>
-  <p>Geben Sie hier Ihre vollständige Lösung für das Registrierungsformular (ggfs. mit allen Dateien hintereinander)
-    ein:</p>
-  <pre>&lt;?php
+<div class="container">
+  <div class="middlepane">
+    <div id="aufgabe">
+      <h1>11.1 Registrierung mit PHP</h1>
+      <p><b>Erstellen Sie mit PHP 5 auf www2.inf.h-brs.de ein Registrierungsformular. Speichern Sie die eingegebenen
+          Daten
+          persistent in einer Datei auf www2.inf.h-brs.de. Schreiben Sie Ihre PHP-Scripte so,
+          dass es zu keinen<a href="https://de.wikipedia.org/wiki/Wettlaufsituation" target="_blank">
+            Nebenläufigkeitsartefakten</a> (z.B.<a href="https://de.wikipedia.org/wiki/Verlorenes_Update"
+            target="_blank">
+            Lost Update </a>) kommen kann, egal wie viele Nutzer sich gleichzeitig registrieren. </b></p>
+      <p>Geben Sie hier Ihre vollständige Lösung für das Registrierungsformular (ggfs. mit allen Dateien hintereinander)
+        ein:</p>
+      <pre>&lt;?php
             session_start();
             if (isset($_POST['account']) && isset($_POST[ 'password' ]) )   
                 $account = $_POST[ 'account' ];
@@ -35,3 +39,10 @@
     &lt;/fieldset>
 &lt;/form>
 	</pre>
+    </div>
+  </div>
+  <div class="rightpane">
+    <p id="ausfuhren"> QUELLCODE AUSFÜHREN</p>
+    <a class="execute" href="assets/loesung 11.1.html" target="_blank">CLICKEN SIE HIER BITTE !</a>
+  </div>
+</div>

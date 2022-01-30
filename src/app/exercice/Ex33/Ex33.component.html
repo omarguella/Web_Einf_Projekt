@@ -10,46 +10,129 @@
 
       <p><b>QUELLCODE:</b> </p>
       <pre>&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-&lt;meta charset="UTF-8">
-/head>
-
-
-&lt;body>
-	&lt;header>
-		&lt;nav>
-			&lt;ul>
-				&lt;li>&lt;a href="#">The book series&lt;/a>&lt;/li>
-				&lt;li>&lt;a href="#">Testemonials&lt;/a>&lt;/li>
-				&lt;li>&lt;a href="#">The Author&lt;/a>&lt;/li>
-				&lt;li>&lt;a href="#">Free resources&lt;/a>&lt;/li>
-			&lt;/ul>
-		&lt;/nav>
-	&lt;/header>
-
-	&lt;h1 class="title">You Dont know JavaScript&lt;/h1>
-
-	&lt;div class="content">
-		&lt;img src="https://kaul.inf.h-brs.de/we/assets/img/landing-img.png"
-			alt="img" />
-		&lt;div class="paragraph">
-			Dont just drift through JavaScript &lt;br> &lt;br> &lt;br>
-			Understand how JavaScript works &lt;br> &lt;br> &lt;br> Start
-			your journey through the bumpy side of JavaScript &lt;br> &lt;br>
-			&lt;br>
-			&lt;button>ORDER YOUR COPY NOW&lt;/button>
-		&lt;/div>
-	&lt;/div>
-
-
-
-	&lt;footer>
-		&lt;p>The first ebook in the book series is absolutely free.&lt;/p>
-		&lt;button>FIND OUT MORE ABOUT THIS OFFER&lt;/button>
-	&lt;/footer>
-&lt;/body>
-&lt;/html>
+        &lt;html lang="en">
+        &lt;head>
+        &lt;meta charset="UTF-8">
+        &lt;/head>
+        &lt;style>
+        * &#123;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+           height:100px;
+          
+        &#123;
+        
+        body &#123;
+          display: grid;
+          grid-template: "a" "b" "c" "d";
+          min-height: 100vh;
+        &#123;
+        
+        header nav ul &#123;
+          background-color: #414141;
+          grid-area: a;
+          padding: 30px;
+          display: flex;
+          justify-content: center;
+          gap: 90px;
+          list-style: none;
+          
+        &#123;
+        
+        a &#123;
+          text-decoration: none;
+          color: white;
+          font-size: 20px;
+        &#123;
+        
+        h1 &#123;
+          grid-area: b;
+          text-align: center;
+          background-color: #d9cccc;
+          padding: 30px;
+        &#123;
+        .content &#123;
+          grid-area: c;
+          display: flex;
+          justify-content: center;
+          gap: 120px;
+          background-color: #d9cccc;
+          padding: 15px;
+             height:600px;
+          
+        &#123;
+        
+        .content img &#123;
+            height: 90%;
+             border: black 1px solid;
+          border-radius: 20px;
+            
+        &#123;
+        
+        .content .paragraph &#123;
+            text-align: center;
+            padding-top: 100px;
+        &#123;
+        
+        footer &#123;
+            grid-area: d;
+            background-color: #010224;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            gap: 20px;
+              font-size: 20px;
+        &#123;
+        
+        button &#123;
+            background-color: orange;
+            width: 300px;
+           height:40px;
+          border-radius: 8px;
+           
+            
+        &#123;
+        
+        &lt;/style>
+        
+              &lt;body>
+                &lt;header>
+                  &lt;nav>
+                    &lt;ul>
+                      &lt;li>&lt;a href="#">The book series&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#">Testemonials&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#">The Author&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#">Free resources&lt;/a>&lt;/li>
+                    &lt;/ul>
+                  &lt;/nav>
+                &lt;/header>
+        
+                &lt;h1 class="title">You Dont know JavaScript&lt;/h1>
+        
+                &lt;div class="content">
+                  &lt;img src="https://kaul.inf.h-brs.de/we/assets/img/landing-img.png" alt="img">&lt;/img>
+                  &lt;div class="paragraph">
+                    Dont just drift through JavaScript &lt;br> &lt;br> &lt;br>
+                    Understand how JavaScript works &lt;br> &lt;br> &lt;br> Start
+                    your journey through the bumpy side of JavaScript &lt;br> &lt;br>
+                    &lt;br>
+                    &lt;button>ORDER YOUR COPY NOW&lt;/button>
+                  &lt;/div>
+                &lt;/div>
+        
+        
+        
+                &lt;footer>
+                  &lt;p>The first ebook in the book series is absolutely free.&lt;/p>
+                  &lt;button>FIND OUT MORE ABOUT THIS OFFER&lt;/button>
+                &lt;/footer>
+              &lt;/body>
+        &lt;/html>
+        
 	</pre>
     </div>
   </div>
@@ -72,7 +155,7 @@
         <h1 class="title">You Dont know JavaScript</h1>
         <div class="content">
 
-          <img src="https://kaul.inf.h-brs.de/we/assets/img/landing-img.png" style="max-width:300px;width:100%"
+          <img src="https://kaul.inf.h-brs.de/we/assets/img/landing-img.png" style="max-width:400px;width:100%"
             alt="img">
           <div class="paragraph">
             Dont just drift through JavaScript <br> <br> <br>

@@ -26,70 +26,70 @@
       <p><b>QUELLCODE:</b></p>
 
       <pre> &lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-&lt;meta charset="ISO-8859-1">
-   
-&lt;/head>
-      
-
-&lt;body>
-
-    &lt;div  >
-    &lt;h1 id="text">dieser Text wiederholt sich 10000 Mal&lt;/h1>
-		&lt;/div>
-    &lt;table>
-       &lt;tr>
-            &lt;td>innerHtml &lt;/td>
-            &lt;td id="innerHtml">&lt;/td>
-       &lt;/tr>
-
-       &lt;tr>
-            &lt;td> innerText&lt;/td>
-            &lt;td id="innerText">&lt;/td>
-       &lt;/tr>
+        &lt;html>
+        &lt;head>
+        &lt;meta charset="ISO-8859-1">
+           
+        &lt;/head>
+              
         
-       &lt;tr>
-            &lt;td>textContent&lt;/td>
-            &lt;td id="textContent">&lt;/td>
-       &lt;/tr>
+        &lt;body>
         
-       &lt;tr>
-            &lt;td>outerHtml
-            &lt;/td>&lt;td id="outerHtml">&lt;/td>
-       &lt;/tr>    
-    &lt;/table>
-
-&lt;/body>
-  &lt;script > var list = document.getElementById('text');
-        let time = performance.now();
-        for (var i = 0; i &lt; 10000; i++) 
-        list.innerHTML ;
-        let timeNew = performance.now();
-        document.getElementById("innerHtml").textContent = `$timeNew -timems`;
+            &lt;div  >
+            &lt;h1 id="text">dieser Text wiederholt sich 10000 Mal&lt;/h1>
+            &lt;/div>
+            &lt;table>
+               &lt;tr>
+                    &lt;td>innerHtml &lt;/td>
+                    &lt;td id="innerHtml">&lt;/td>
+               &lt;/tr>
         
-         time = performance.now();
-        for (var i = 0; i &lt; 10000; i++) 
-        list.innerText ;
-        timeNew = performance.now();
-        document.getElementById("innerText").textContent = `$timeNew - timems`;
+               &lt;tr>
+                    &lt;td> innerText&lt;/td>
+                    &lt;td id="innerText">&lt;/td>
+               &lt;/tr>
+                
+               &lt;tr>
+                    &lt;td>textContent&lt;/td>
+                    &lt;td id="textContent">&lt;/td>
+               &lt;/tr>
+                
+               &lt;tr>
+                    &lt;td>outerHtml
+                    &lt;/td>&lt;td id="outerHtml">&lt;/td>
+               &lt;/tr>    
+            &lt;/table>
         
-        time = performance.now();
-        for (var i = 0; i &lt; 10000; i++)
-        list.textContent ;
-        timeNew = performance.now();
-        document.getElementById("textContent").textContent = `$timeNew - timems`;
+        &lt;/body>
+          &lt;script > var list = document.getElementById('text');
+                let time = performance.now();
+                for (var i = 0; i &lt; 10000; i++) 
+                &#123;list.innerHTML ;&#123;
+                let timeNew = performance.now();
+                document.getElementById("innerHtml").textContent = `$&#123;timeNew -time&#123;ms`;
+                
+                 time = performance.now();
+                for (var i = 0; i &lt; 10000; i++) 
+                &#123;list.innerText ;&#123;
+                timeNew = performance.now();
+                document.getElementById("innerText").textContent = `$&#123;timeNew - time&#123;ms`;
+                
+                time = performance.now();
+                for (var i = 0; i &lt; 10000; i++)
+                &#123;list.textContent ;&#123;
+                timeNew = performance.now();
+                document.getElementById("textContent").textContent = `$&#123;timeNew - time&#123;ms`;
+                
+                time = performance.now();
+                for (var i = 0; i &lt; 10000; i++)
+                &#123;  list.outerHtml ; &#123;
+               timeNew = performance.now();    
+                document.getElementById("outerHtml").textContent = `$&#123;timeNew - time&#123; ms`;
+                &lt;/script>
+        &lt;/html>
         
-        time = performance.now();
-        for (var i = 0; i &lt; 10000; i++)
-          list.outerHtml ;
-       timeNew = performance.now();    
-        document.getElementById("outerHtml").textContent = `$timeNew - time ms`;
-        &lt;/script>
-&lt;/html>
-
-
-	</pre>
+        
+          </pre>
     </div>
   </div>
 

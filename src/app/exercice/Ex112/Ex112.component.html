@@ -1,11 +1,14 @@
-<body>
-  <div id="aufgabe">
-    <h1>12.2 Login mit PHP</h1>
-    <p><b>Schreiben Sie eine sichere PHP-Lösung für Login, das die persistierten Registrierungsdaten aus der letzten
-        Aufgabe nutzt. </b></p>
-    <p>Geben Sie alle Ihre PHP-Skripte hier an:</p>
+<div class="container">
+  <div class="middlepane">
+    <div id="aufgabe">
 
-    <pre>&lt;?php
+      <h1>12.2 Login mit PHP</h1>
+      <p><b>Schreiben Sie eine sichere PHP-Lösung für Login, das die persistierten Registrierungsdaten aus der
+          letzten
+          Aufgabe nutzt. </b></p>
+      <p>Geben Sie alle Ihre PHP-Skripte hier an:</p>
+
+      <pre>&lt;?php
       $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
       $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
   
@@ -23,9 +26,9 @@
         
   ?>
 	</pre>
-    <p>Geben Sie Ihren Client-Code (HTML, CSS, Javascript), falls zusätzlich zum PHP-Skript vorhanden, hier an:<p>
+      <p>Geben Sie Ihren Client-Code (HTML, CSS, Javascript), falls zusätzlich zum PHP-Skript vorhanden, hier an:<p>
 
-        <pre>&lt;!DOCTYPE html>
+          <pre>&lt;!DOCTYPE html>
           &lt;h1>Login&lt;/h1>
           &lt;form method="post">
               &lt;fieldset>
@@ -40,3 +43,11 @@
               &lt;/fieldset>
           &lt;/form>
 	</pre>
+
+    </div>
+  </div>
+  <div class="rightpane">
+    <p id="ausfuhren"> QUELLCODE AUSFÜHREN</p>
+    <a class="execute" href="assets/loesung 11.2.html" target="_blank">CLICKEN SIE HIER BITTE !</a>
+  </div>
+</div>

@@ -1,49 +1,95 @@
-<div id="aufgabe">
-  <h1>6.1. Klammerpaare</h1>
+<div class="container">
+  <div class="middlepane">
+    <div id="aufgabe">
+      <h1>6.1. Klammerpaare</h1>
 
-  <p><b>Schreiben Sie eine Webseite, in die man eine Zeichenkette mit beliebigen Buchstaben, Zahlen und Sonderzeichen
-      eingeben kann, die beliebig geschachtelte Klammern <code>[...], (...)</code> und enthält, so dass sofort geprüft
-      wird, ob
-      alle Klammerpaare
-      korrekt geschachtelt sind. Das Eingabefeld der Zeichenkette soll rot gefärbt werden, wenn es ein Klammerpaar gibt,
-      das falsch geschachtelt ist. </b></p>
+      <p><b>Schreiben Sie eine Webseite, in die man eine Zeichenkette mit beliebigen Buchstaben, Zahlen und
+          Sonderzeichen
+          eingeben kann, die beliebig geschachtelte Klammern <code>[...], (...)</code> und enthält, so dass sofort
+          geprüft
+          wird, ob
+          alle Klammerpaare
+          korrekt geschachtelt sind. Das Eingabefeld der Zeichenkette soll rot gefärbt werden, wenn es ein Klammerpaar
+          gibt,
+          das falsch geschachtelt ist. </b></p>
 
-  <p>Geben Sie die HTML-Seite inkl. ES6-Code inkl. Tests hier ein. Verwenden Sie für Ihre Tests die Funktion <a
-      href="https://developer.mozilla.org/de/docs/Web/API/Console/assert" target="_blank"> console.assert</a>. </p>
+      <p>Geben Sie die HTML-Seite inkl. ES6-Code inkl. Tests hier ein. Verwenden Sie für Ihre Tests die Funktion <a
+          href="https://developer.mozilla.org/de/docs/Web/API/Console/assert" target="_blank"> console.assert</a>. </p>
 
-  <p>QUELLCODE:</p>
-  <pre>&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-
-&lt;/head>
-&lt;body>
-
-
-&lt;h1>Write Your text im Field and see if you have forgot to Close any nested brackets&lt;/h1>
-
-&lt;textarea id="textarea" rows="4" cols="50" placeholder="write your Text and please use some nested brackets" >
-&lt;/textarea>
-
-  &lt;button class="button" onclick = check() >check Text&lt;/button>
-&lt;script>
-const zeichen = 
-    openklamma: 0,
-    openEckigeKlammer: 0,
-    openGeschweifteKlammer: 0,
-
-;
-
-
-
-
- 
- 
-
-&lt;/script>
-
-&lt;/body>
-&lt;/html>
-
-	</pre>
+      <p>QUELLCODE:</p>
+      <pre>&lt;!DOCTYPE html>
+        &lt;html>
+        &lt;head>
+        
+        &lt;/head>
+        &lt;body>
+        
+        
+        &lt;h1>Write Your text im Field and see if you have forgot to Close any nested brackets&lt;/h1>
+        
+        &lt;textarea id="textarea" rows="4" cols="50" placeholder="write your Text and please use some nested brackets" >
+        &lt;/textarea>
+        
+          &lt;button class="button" onclick = check() >check Text&lt;/button>
+        &lt;script>
+        const zeichen = &#123;
+            openklamma: 0,
+            openEckigeKlammer: 0,
+            openGeschweifteKlammer: 0,
+        
+        &#123;;
+        
+        
+        function check() &#123;
+          const text= document.getElementById("textarea").value;
+            for (let i of text) &#123;
+        
+                if (i == "(") &#123;
+                    zeichen.openklamma++;
+                &#123;
+                if (i == "&#123;") &#123;
+                    zeichen.openGeschweifteKlammer++;
+                &#123;
+                if (i == "[") &#123;
+        
+                    zeichen.openEckigeKlammer++;
+                &#123;
+        
+                if (i == ")") &#123;
+                    zeichen.openklamma--;
+                &#123;
+                if (i == "&#123;") &#123;
+        
+                    zeichen.openGeschweifteKlammer--;
+                &#123;
+                if (i == "]") &#123;
+                    zeichen.openEckigeKlammer--;
+                &#123;
+        
+            &#123;
+        
+            var s = (zeichen.openklamma + zeichen.openGeschweifteKlammer + zeichen.openEckigeKlammer) == 0;
+        
+            console.assert(s, 'the Text IS NOT ACCEPTED');
+        
+            if (s == false) &#123;
+                document.getElementById("textarea").style="background-color:red;";
+            &#123;
+        
+        &#123;
+         
+         
+        
+        &lt;/script>
+        
+        &lt;/body>
+        &lt;/html>
+        
+          </pre>
+    </div>
+  </div>
+  <div class="rightpane">
+    <p id="ausfuhren"> QUELLCODE AUSFÜHREN</p>
+    <a class="execute" href="assets/loesung 6.1.html" target="_blank">CLICKEN SIE HIER BITTE !</a>
+  </div>
 </div>
