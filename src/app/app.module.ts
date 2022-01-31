@@ -1,5 +1,6 @@
 import { AboutMeComponent } from './exercice/aboutMe/aboutMe.component';
 import { Ex65Component } from './exercice/Ex65/Ex65.component';
+import { Ex113Component } from './exercice/Ex113/Ex113.component';
 import { Ex112Component } from './exercice/Ex112/Ex112.component';
 import { Ex111Component } from './exercice/Ex111/Ex111.component';
 import { Ex103Component } from './exercice/Ex103/Ex103.component';
@@ -85,6 +86,7 @@ import { FormsModule } from '@angular/forms';
       Ex103Component,
       Ex111Component,
       Ex112Component,
+      Ex113Component,
       AboutMeComponent
 
    ],

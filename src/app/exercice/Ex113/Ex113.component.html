@@ -1,0 +1,154 @@
+<div class="container">
+  <div class="middlepane">
+    <div id="aufgabe">
+
+      <h1>11.3 WWW-Navigator zum Content-Editor ausbauen </h1>
+      <p><b>Bauen Sie Ihren WWW-Navigator zum Content-Editor aus, mit dem Sie weitere Inhalte hinzu fügen können,
+          die persistent auf dem Server mittels PHP gespeichert werden. Schreiben Sie Ihre PHP-Scripte so,
+          dass es zu keinen <a href="https://de.wikipedia.org/wiki/Wettlaufsituation"
+            target="_blank">"Nebenläufigkeitsartefakten"</a> kommen kann, egal wie viele Nutzer gleichzeitig editieren
+          und
+          speichern.<br><br>
+
+          Speichern Sie die Inhalte Ihres WWW-Navigators auf dem Server www2.inf.h-brs.de. Erweitern Sie Ihren
+          WWW-Navigator
+          um eine Edit-Funktionalität, so dass Inhalte editiert und ergänzt werden können. Vermeiden Sie die <a
+            href="https://de.wikipedia.org/wiki/Verlorenes_Update" target="_blank">"Lost Update-Anomalie "</a>
+          .<br><br>
+
+          Schützen Sie Ihre Inhalte mit einem Login. </b></p>
+      <p> Login QUELLCODE:</p>
+
+      <pre>&lt;!DOCTYPE html>
+        &lt;html>
+        &lt;head>
+        
+        &lt;/head>
+        
+        
+            &lt;div class=main> 
+            &lt;h1>LOGIN&lt;/h1>
+        &lt;form method="post">
+                Username:&lt;br>
+                &lt;input type="text" name="username">
+                &lt;br>
+                PASSWORD:&lt;br>
+                &lt;input type="password" name="password">
+                &lt;br>
+                &lt;input type="submit" >
+        &lt;/form>
+        
+        
+        
+        &lt;/div>
+        
+        &lt;/html>
+        
+        &lt;?php
+        
+            $username = $_POST['username'];
+            $Password = $_POST["password"];
+        
+            $lines = file("./Accounts.csv");
+            $Account = false;
+            foreach($lines as $line_num => $line)&#123;
+                list( $csvUsername, $csvPassword) = explode(",", $line);
+                if($csvUsername === hash("sha256", $username))&#123;
+                    if($csvPassword === hash("sha256", $Password) . "\n")&#123;
+                        echo "&lt;script>alert('Login erfolgreich!')&lt;/script>";
+                header("Location: ./WWW-Navigator.php");
+                        $Account = true;
+                        break;
+                    &#125;
+                &#125;
+            &#125;
+            if(!$Account && ($username || $Password))&#123;
+                echo "&lt;script>alert('Name oder Password falsch!')&lt;/script>";
+            &#125;
+        
+        ?>
+        
+        
+	</pre>
+      <p> WWW-Navigator QUELLCODE:</p>
+
+
+      <pre>
+            &lt;!doctype html>
+
+            &lt;style>
+             textarea&#123; position: absolute;
+              top: 107px;
+              width: 25%;
+              height: 90px;
+              left: 9px;
+            &#125;
+            &lt;/style>
+            
+            
+            &lt;div class="main">
+            &lt;h1> WWW-Navigator mit PHP&lt;/h1>
+            &lt;form method="post">
+                    &lt;select name="top_thema">
+                        &lt;option style="position: absolute;top: 81px; " value="We_App">We_App&lt;/option>
+                        &lt;option style="position: absolute;top: 81px;width: 5%;position: absolute;top: 81px;width: 5%;left: 132px;" value="Aufgaben">Aufgaben&lt;/option>
+                    &lt;/select>
+                    &lt;select name="sub_thema">
+                    &lt;/select>
+                    &lt;textarea name="content">&lt;/textarea>
+                    &lt;input type="submit" value="Submit">
+            &lt;/form>
+            &lt;/div>
+            &lt;?PHP
+            $datei = './content.json';
+            $contents = file_get_contents( $datei );
+            $json = json_decode( $contents, true );
+            ?>
+            &lt;script>
+                let json = &lt;?PHP echo json_encode( $json ) ?>;
+                let sub_thema = document.querySelector('select[name="sub_thema"]');
+                let top_thema = document.querySelector('select[name="top_thema"]');
+                let content = document.querySelector('textarea[name="content"');
+                    top_thema.addEventListener('click', e => &#123;
+                    content.innerHTML = "";
+                    for(let i = sub_thema.options.length-1; i >= 0; i--)&#123; sub_thema.options[i] = null;&#125;          
+                   
+                 Object.keys( json[ e.target.value ] ).forEach( key => &#123;
+                        let newOption = document.createElement('option');
+                        newOption.value = key;
+                        newOption.innerText = key;
+                        sub_thema.appendChild( newOption ); &#125;);
+                &#125;);
+                sub_thema.addEventListener('click', e => &#123;
+                    if(json[top_thema.value][sub_thema.value]) 
+                &#123;content.innerHTML = json[top_thema.value][sub_thema.value];&#125;
+                     else &#123;content.innerHTML = "";&#125;&#125;);
+            
+            
+            &lt;/script>
+            
+            &lt;?PHP
+            
+            if ( isset($_POST[ 'top_thema' ]) && isset($_POST[ 'sub_thema' ]) && isset($_POST[ 'content' ]) )&#123;
+                $top_thema = $_POST[ 'top_thema' ];
+              $content = $_POST[ 'content' ];
+                $sub_thema = $_POST[ 'sub_thema' ];
+            
+                    $json[ $top_thema ][ $sub_thema ] = $content;
+                    if ( file_put_contents( $datei, json_encode( $json, true )) )&#123;
+                        echo "&lt;script>alert('Erfolgreich gespeichert!')&lt;/script>";
+                        header("Refresh:0");
+                    &#125;
+            &#125;
+            ?>
+             
+
+	</pre>
+
+    </div>
+  </div>
+  <div class="rightpane">
+    <p id="ausfuhren"> QUELLCODE AUSFÜHREN</p>
+    <a class="execute" href="http://localhost/phpscript/LogNavigator.php" target="_blank">klicken SIE HIER BITTE !</a>
+  </div>
+</div>

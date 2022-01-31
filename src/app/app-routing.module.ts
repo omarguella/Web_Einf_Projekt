@@ -1,6 +1,7 @@
 import { AboutMeComponent } from './exercice/aboutMe/aboutMe.component';
 import { Ex33Component } from './exercice/Ex33/Ex33.component';
 import { Ex65Component } from './exercice/Ex65/Ex65.component';
+import { Ex113Component } from './exercice/Ex113/Ex113.component';
 import { Ex112Component } from './exercice/Ex112/Ex112.component';
 import { Ex111Component } from './exercice/Ex111/Ex111.component';
 import { Ex103Component } from './exercice/Ex103/Ex103.component';
@@ -73,6 +74,7 @@ const routes: Routes = [
     {path: 'Ex103' , component: Ex103Component },
     {path: 'Ex111' , component: Ex111Component },
     {path: 'Ex112' , component: Ex112Component },
+    {path: 'Ex113' , component: Ex113Component },
   ] }
 ];
 

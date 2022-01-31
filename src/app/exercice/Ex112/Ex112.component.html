@@ -2,52 +2,70 @@
   <div class="middlepane">
     <div id="aufgabe">
 
-      <h1>12.2 Login mit PHP</h1>
+      <h1>11.2 Login mit PHP</h1>
       <p><b>Schreiben Sie eine sichere PHP-Lösung für Login, das die persistierten Registrierungsdaten aus der
           letzten
           Aufgabe nutzt. </b></p>
       <p>Geben Sie alle Ihre PHP-Skripte hier an:</p>
 
-      <pre>&lt;?php
-      $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-      $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-  
-      if (($handle = fopen("./raw_passwd.csv", "r")) !== FALSE)   
-          while (($data = fgetcsv($handle, 0, ",")) !== FALSE)   
-              if ($data[0] === $user)   
-                  if (password_verify($passwd, $data[1]))   
-                      echo "&lt;script>&lt;alert>Login erfolgreich!&lt;/script>";
-                     else   
-                      echo "$password Login Fehlgeschlagen";
-                    
-                
-            
-          fclose($handle);
+      <pre>
+        &lt;?php
         
-  ?>
+            $username = $_POST['username'];
+            $Password = $_POST["password"];
+        
+            $lines = file("./Accounts.csv");
+            $Account = false;
+            foreach($lines as $line_num => $line)&#123;
+                list( $csvUsername, $csvPassword) = explode(",", $line);
+                if($csvUsername === hash("sha256", $username))&#123;
+                    if($csvPassword === hash("sha256", $Password) . "\n")&#123;
+                        echo "&lt;script>alert('Login erfolgreich!')&lt;/script>";
+                        $Account = true;
+                        break;
+                    &#125;
+                &#125;
+            &#125;
+            if(!$Account && ($username || $Password))&#123;
+                echo "&lt;script>alert('Name oder Password falsch!')&lt;/script>";
+            &#125;
+        
+        ?>
 	</pre>
       <p>Geben Sie Ihren Client-Code (HTML, CSS, Javascript), falls zusätzlich zum PHP-Skript vorhanden, hier an:<p>
 
-          <pre>&lt;!DOCTYPE html>
-          &lt;h1>Login&lt;/h1>
-          &lt;form method="post">
-              &lt;fieldset>
-                  &lt;legend>Login &lt;/legend>
-                  Account name: &lt;br>
-                  &lt;input type="text" name="account">
-                  &lt;br>
-                  Password: &lt;br>
-                  &lt;input type="password" name="password">
-                  &lt;br>&lt;/br>
-                  &lt;input type="submit" value="Submit">
-              &lt;/fieldset>
-          &lt;/form>
+          <pre>
+            &lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+
+&lt;/head>
+
+
+    &lt;div class=main> 
+    &lt;h1>LOGIN&lt;/h1>
+&lt;form method="post">
+        Username:&lt;br>
+        &lt;input type="text" name="username">
+        &lt;br>
+        PASSWORD:&lt;br>
+        &lt;input type="password" name="password">
+        &lt;br>
+        &lt;input type="submit" >
+&lt;/form>
+
+
+
+&lt;/div>
+
+&lt;/html>
+
 	</pre>
 
     </div>
   </div>
   <div class="rightpane">
     <p id="ausfuhren"> QUELLCODE AUSFÜHREN</p>
-    <a class="execute" href="assets/loesung 11.2.html" target="_blank">klicken SIE HIER BITTE !</a>
+    <a class="execute" href="http://localhost/phpscript/login.php" target="_blank">klicken SIE HIER BITTE !</a>
   </div>
 </div>

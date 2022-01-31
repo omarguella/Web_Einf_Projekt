@@ -1,239 +1,239 @@
-  .container {
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 0.9fr 1fr 1fr;
+  grid-template-rows: 0.9fr 0.5fr 1.6fr;
+  gap: 4px 0px;
+  grid-template-areas:
+    "toppane toppane toppane toppane"
+    "toppanedown toppanedown toppanedown toppanedown"
+    "leftpane rightpane rightpane rightpane";
+}
+
+.toppane {
+  grid-area: toppane;
+}
+
+.toppanedown {
+  grid-area: toppanedown;
+}
+
+.leftpane {
+  grid-area: leftpane;
+}
+
+.rightpane {
+  grid-area: rightpane;
+}
+
+
+.leftpane {
+  width: 16%;
+  float: left;
+  background-image: linear-gradient(rgb(96, 123, 245), #FFFFFF);
+  margin-left: -7px;
+  padding-left: 0.02%;
+  position: absolute;
+  top: 262px;
+}
+
+.rightpane {
+  width: 1702px;
+  position: absolute;
+  float: right;
+  background-color: #4ee6ee;
+  border-style: solid;
+  border-width: 1px;
+  left: 326px;
+  top: 264px;
+
+}
+
+.toppane {
+  height: 176PX;
+  border-collapse: collapse;
+  background-image: linear-gradient(#FFFFFF, rgb(96, 123, 245));
+  margin-left: -7px;
+  margin-right: -7px;
+}
+
+.toppanedown {
+  width: 2029px;
+  height: 8%;
+  background-color: rgb(96, 123, 245);
+  margin-left: -7px;
+  position: absolute;
+  top: 184px;
+}
+
+.containerbuttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  flex-direction: row;
+  margin-bottom: 0.5vh;
+  width: 70%;
+  height: 100%;
+  margin-left: 16%;
+}
+
+#logo {
+  width: 17%;
+  height: 43%;
+  opacity: 80%;
+}
+
+.aboutme {
+  left: 90%;
+  box-shadow: 0px 12px 12px -7px #3e7327;
+  background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  border-radius: 4px;
+  border: 1px solid #4b8f29;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 37px;
+  text-decoration: none;
+  text-shadow: -1px -1px 50px #5b8a3c;
+  position: absolute;
+
+}
+
+.aboutme:hover {
+  background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+  background-color: #72b352;
+}
+
+.aboutme:active {
+  transform: translateY(8px);
+}
+
+#aboutme:active {
+  background-color: rgb(144, 130, 219);
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(37, 50, 231, 0.24), 0 17px 50px 0 rgba(108, 120, 228, 0.19);
+  transform: translateY(8px);
+}
+
+#title1 {
+  width: auto;
+  padding-left: 30%;
+  color: #CEF0D4;
+  font-family: 'Rouge Script', cursive;
+  font-size: 50px;
+  line-height: 108px;
+  margin: 9px 0 -50px;
+  text-shadow: 1px 1px 2px #082b34;
+}
+
+
+
+.navbt {
+  background-color: rgb(96, 123, 245);
+  color: white;
+  padding: 25px;
+  font-size: 17px;
+  font-weight: absolute;
+  border: none;
+  font-family: "Trebuchet MS";
+  font-size: 18px;
+
+}
+
+.navbt:hover {
+  background-color: rgb(228, 206, 167);
+  color: rgb(0, 26, 255)
+}
+
+.navbt:active {
+  transform: translateY(-8px);
+
+}
+
+
+
+@media screen and (max-width: 1900px) {
+  .toppanedown {
+    top: 157px;
+    height: 10%;
+    width: 1347px;
+    margin-left: -7px;
+  }
+
+  .aboutme {
+    left: 86%;
+  }
+
+  #logo {
+    width: 24%;
+  }
+
+  .navbt {
+    padding: 19px;
+    font-size: 17px;
+  }
+
+  .containerbuttons {
+    margin-left: 12px;
     width: 100%;
-    height: 100%;
+  }
+
+  .leftpane {
+    width: 19%;
+    top: 217px;
+  }
+
+  #title1 {
+    position: absolute;
+    top: 46px;
+  }
+
+  .rightpane {
+    width: 1112px;
+    left: 233px;
+    top: 217px;
+  }
+
+  .toppane {
+    height: 149PX;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .container {
     display: grid;
-    grid-template-columns: 0.9fr 0.9fr 1fr 1fr;
-    grid-template-rows: 0.9fr 0.5fr 1.6fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.7fr 0.4fr 0.4fr 2.5fr;
     gap: 4px 0px;
     grid-template-areas:
-      "toppane toppane toppane toppane"
-      "toppanedown toppanedown toppanedown toppanedown"
-      "leftpane rightpane rightpane rightpane";
+      "toppane toppane toppane"
+      "toppanedown toppanedown toppanedown"
+      "leftpane leftpane leftpane"
+      "rightpane rightpane rightpane";
   }
 
   .toppane {
     grid-area: toppane;
+
   }
 
   .toppanedown {
     grid-area: toppanedown;
   }
 
-  .leftpane {
-    grid-area: leftpane;
-  }
-
   .rightpane {
     grid-area: rightpane;
   }
 
-
   .leftpane {
-    width: 16%;
-    float: left;
-    background-image: linear-gradient(rgb(96, 123, 245), #FFFFFF);
-    margin-left: -7px;
-    padding-left: 0.02%;
-    position: absolute;
-    top: 262px;
-  }
-
-  .rightpane {
-    width: 1702px;
-    position: absolute;
-    float: right;
-    background-color: #4ee6ee;
-    border-style: solid;
-    border-width: 1px;
-    left: 326px;
-    top: 264px;
-
-  }
-
-  .toppane {
-    height: 176PX;
-    border-collapse: collapse;
-    background-image: linear-gradient(#FFFFFF, rgb(96, 123, 245));
-    margin-left: -7px;
-    margin-right: -7px;
-  }
-
-  .toppanedown {
-    width: 2029px;
-    height: 8%;
-    background-color: rgb(96, 123, 245);
-    margin-left: -7px;
-    position: absolute;
-    top: 184px;
-  }
-
-  .containerbuttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 0px;
-    flex-direction: row;
-    margin-bottom: 0.5vh;
-    width: 70%;
-    height: 100%;
-    margin-left: 16%;
-  }
-
-  #logo {
-    width: 17%;
-    height: 43%;
-    opacity: 80%;
-  }
-
-  .aboutme {
-    left: 90%;
-    box-shadow: 0px 12px 12px -7px #3e7327;
-    background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-    border-radius: 4px;
-    border: 1px solid #4b8f29;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 6px 37px;
-    text-decoration: none;
-    text-shadow: -1px -1px 50px #5b8a3c;
-    position: absolute;
-
-  }
-
-  .aboutme:hover {
-    background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
-    background-color: #72b352;
-  }
-
-  .aboutme:active {
-    transform: translateY(8px);
-  }
-
-  #aboutme:active {
-    background-color: rgb(144, 130, 219);
-    color: white;
-    box-shadow: 0 12px 16px 0 rgba(37, 50, 231, 0.24), 0 17px 50px 0 rgba(108, 120, 228, 0.19);
-    transform: translateY(8px);
+    grid-area: leftpane;
   }
 
   #title1 {
-    width: auto;
-    padding-left: 30%;
-    color: #CEF0D4;
-    font-family: 'Rouge Script', cursive;
-    font-size: 50px;
-    line-height: 108px;
-    margin: 9px 0 -50px;
-    text-shadow: 1px 1px 2px #082b34;
+    font-size: 20px;
   }
-
-
-
-  .navbt {
-    background-color: rgb(96, 123, 245);
-    color: white;
-    padding: 25px;
-    font-size: 17px;
-    font-weight: absolute;
-    border: none;
-    font-family: "Trebuchet MS";
-    font-size: 18px;
-
-  }
-
-  .navbt:hover {
-    background-color: rgb(228, 206, 167);
-    color: rgb(0, 26, 255)
-  }
-
-  .navbt:active {
-    transform: translateY(-8px);
-
-  }
-
-
-
-  @media screen and (max-width: 1900px) {
-    .toppanedown {
-      top: 157px;
-      height: 10%;
-      width: 1347px;
-      margin-left: -7px;
-    }
-
-    .aboutme {
-      left: 86%;
-    }
-
-    #logo {
-      width: 24%;
-    }
-
-    .navbt {
-      padding: 19px;
-      font-size: 17px;
-    }
-
-    .containerbuttons {
-      margin-left: 12px;
-      width: 100%;
-    }
-
-    .leftpane {
-      width: 19%;
-      top: 217px;
-    }
-
-    #title1 {
-      position: absolute;
-      top: 46px;
-    }
-
-    .rightpane {
-      width: 1112px;
-      left: 233px;
-      top: 217px;
-    }
-
-    .toppane {
-      height: 149PX;
-    }
-  }
-
-
-  @media screen and (max-width: 900px) {
-    .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 0.7fr 0.4fr 0.4fr 2.5fr;
-      gap: 4px 0px;
-      grid-template-areas:
-        "toppane toppane toppane"
-        "leftpane leftpane leftpane"
-        "toppanedown toppanedown toppanedown"
-        "rightpane rightpane rightpane";
-    }
-
-    .toppane {
-      grid-area: toppane;
-
-    }
-
-    .toppanedown {
-      grid-area: toppanedown;
-    }
-
-    .rightpane {
-      grid-area: rightpane;
-    }
-
-    .leftpane {
-      grid-area: leftpane;
-    }
-
-    #title1 {
-      font-size: 20px;
-    }
-  }
+}
