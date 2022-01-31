@@ -28,8 +28,6 @@ li {
 
 
 .aufgabe {
-  font-size: 36px;
-  line-height: 1.8;
   letter-spacing: 0.011em;
   font-style: normal;
   min-width: auto;
@@ -37,7 +35,6 @@ li {
   color: #d3e3f0;
   font-family: 'Rouge Script', cursive;
   font-size: 40px;
-  font-weight: absolute;
   line-height: 90px;
   text-shadow: 1px 1px 2px #082b34;
 }
@@ -70,4 +67,16 @@ button:hover {
 button:active {
   position: relative;
   top: 1px;
+}
+
+
+@media screen and (max-width: 1900px) {
+  .aufgabe {
+    font-size: 30px;
+    padding-left: 12%;
+  }
+
+  button {
+    width: 192px;
+  }
 }
