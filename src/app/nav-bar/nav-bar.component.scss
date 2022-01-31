@@ -2,13 +2,15 @@ ul {
   line-height: 0.9;
   letter-spacing: -0.14em;
   font-weight: 500;
-  padding-left: 1px;
+  padding-left: 24px;
   margin-left: -16px;
+  position: absolute;
+  top: 100px;
+  list-style-type: none;
 }
 
 li {
-  padding: 5px;
-
+  padding: 20px;
 }
 
 .buttons {
@@ -23,7 +25,6 @@ li {
   width: 150px;
   display: block;
   height: 900px;
-
 }
 
 
@@ -37,6 +38,7 @@ li {
   font-size: 40px;
   line-height: 90px;
   text-shadow: 1px 1px 2px #082b34;
+  position: absolute;
 }
 
 button {
@@ -44,7 +46,6 @@ button {
   right: 25px;
   box-shadow: inset 0px -21px 48px -13px #23395e;
   background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
-  background-color: #2e466e;
   border: 1px solid #1f2f47;
   display: inline-block;
   cursor: pointer;
@@ -55,6 +56,7 @@ button {
   padding: 14px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #263666;
+  position: relative;
 }
 
 
@@ -72,11 +74,22 @@ button:active {
 
 @media screen and (max-width: 1900px) {
   .aufgabe {
+    top: -11px;
     font-size: 30px;
     padding-left: 12%;
   }
 
   button {
     width: 192px;
+    font-size: 14px;
+  }
+
+  li {
+    padding: 9px;
+  }
+
+  ul {
+    padding-left: 20px;
+    top: 55px;
   }
 }
