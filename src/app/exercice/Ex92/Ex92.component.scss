@@ -4,7 +4,7 @@
 }
 
 .middlepane {
-  width: 64%;
+  width: 76%;
   height: 100%;
   position: relative;
   float: left;
@@ -12,8 +12,16 @@
   border-collapse: collapse;
 }
 
+h1 {
+  grid-area: b;
+  text-align: center;
+  background-color: #d9cccc;
+  padding: 10px;
+  margin-top: 0px;
+}
+
 .rightpane {
-  width: 35%;
+  width: 24%;
   height: 100%;
   position: relative;
   float: right;
@@ -57,14 +65,14 @@ pre {
 .execute {
   padding: 5px 11px;
   cursor: pointer;
-  font-size: 29px;
+  font-size: 25px;
   font-family: Verdana, sans-serif;
   text-shadow: 3px 3px 3px #ababab;
   color: white;
   background-color: #689ef7;
   border: none;
   border-radius: 9px;
-  margin-left: 18%;
+  margin-left: 12%;
 }
 
 /*W3school*/
@@ -73,17 +81,13 @@ pre {
   transform: translateY(8px);
 }
 
-h1 {
-  grid-area: b;
-  text-align: center;
-  background-color: #d9cccc;
-  padding: 10px;
-  margin-top: 0px;
-}
-
 @media screen and (max-width: 1900px) {
+  #ausfuhren {
+    font-size: 21px;
+  }
+
   .execute {
-    font-size: 20px;
-    margin-left: 15%;
+    margin-left: 3%;
+    font-size: 18px;
   }
 }

@@ -4,7 +4,7 @@
 }
 
 .middlepane {
-  width: 64%;
+  width: 76%;
   height: 100%;
   position: relative;
   float: left;
@@ -21,7 +21,7 @@ h1 {
 }
 
 .rightpane {
-  width: 35%;
+  width: 24%;
   height: 100%;
   position: relative;
   float: right;
@@ -65,18 +65,29 @@ pre {
 .execute {
   padding: 5px 11px;
   cursor: pointer;
-  font-size: 29px;
+  font-size: 25px;
   font-family: Verdana, sans-serif;
   text-shadow: 3px 3px 3px #ababab;
   color: white;
   background-color: #689ef7;
   border: none;
   border-radius: 9px;
-  margin-left: 18%;
+  margin-left: 12%;
 }
 
 /*W3school*/
 .execute:active {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: translateY(8px);
+}
+
+@media screen and (max-width: 1900px) {
+  #ausfuhren {
+    font-size: 21px;
+  }
+
+  .execute {
+    margin-left: 3%;
+    font-size: 18px;
+  }
 }

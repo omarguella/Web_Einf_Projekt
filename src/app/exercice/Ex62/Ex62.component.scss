@@ -4,7 +4,7 @@
 }
 
 .middlepane {
-  width: 64%;
+  width: 76%;
   height: 100%;
   position: relative;
   float: left;
@@ -12,8 +12,16 @@
   border-collapse: collapse;
 }
 
+h1 {
+  grid-area: b;
+  text-align: center;
+  background-color: #d9cccc;
+  padding: 10px;
+  margin-top: 0px;
+}
+
 .rightpane {
-  width: 35%;
+  width: 24%;
   height: 100%;
   position: relative;
   float: right;
@@ -52,12 +60,13 @@ pre {
   border-style: dotted;
 }
 
+
 .execute1 {
-  top: 588%;
+  top: 596%;
 }
 
 .execute2 {
-  top: 3000%;
+  top: 2710%;
 }
 
 .execute1,
@@ -71,7 +80,7 @@ pre {
   background-color: #689ef7;
   border: none;
   border-radius: 9px;
-  margin-left: -1%;
+  margin-left: 1%;
   position: absolute;
 }
 
@@ -83,10 +92,23 @@ pre {
   transform: translateY(8px);
 }
 
-h1 {
-  grid-area: b;
-  text-align: center;
-  background-color: #d9cccc;
-  padding: 10px;
-  margin-top: 0px;
+@media screen and (max-width: 1900px) {
+  #ausfuhren {
+    font-size: 21px;
+  }
+
+  .execute2 {
+    top: 3684%;
+  }
+
+  .execute1 {
+    top: 921%;
+  }
+
+
+  .execute2,
+  .execute1 {
+    margin-left: 3%;
+    font-size: 18px;
+  }
 }

@@ -7,32 +7,86 @@ html {
 .container {
   width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 0.9fr 1fr 1fr;
+  grid-template-rows: 0.9fr 0.5fr 1.6fr;
+  gap: 4px 0px;
+  grid-template-areas:
+    "toppane toppane toppane toppane"
+    "toppanedown toppanedown toppanedown toppanedown"
+    "leftpane rightpane rightpane rightpane";
+}
 
+.toppane {
+  grid-area: toppane;
+}
+
+.toppanedown {
+  grid-area: toppanedown;
 }
 
 .leftpane {
-  width: 15%;
-  height: 2000px;
-  float: left;
-  background-color: #13dceb;
-  background-image: linear-gradient(rgb(96, 123, 245), #FFFFFF);
-  margin-left: -7px;
-  margin-top: -5px;
-  padding-left: 0.02%;
+  grid-area: leftpane;
+}
+
+.rightpane {
+  grid-area: rightpane;
 }
 
 
+.leftpane {
+  width: 16%;
+  float: left;
+  background-image: linear-gradient(rgb(96, 123, 245), #FFFFFF);
+  margin-left: -7px;
+  padding-left: 0.02%;
+  position: absolute;
+  top: 262px;
+}
+
+.rightpane {
+  width: 1702px;
+  position: absolute;
+  float: right;
+  background-color: #4ee6ee;
+  border-style: solid;
+  border-width: 1px;
+  left: 326px;
+  top: 264px;
+
+}
+
 .toppane {
-  height: 100%;
+  height: 176PX;
   border-collapse: collapse;
   background-image: linear-gradient(#FFFFFF, rgb(96, 123, 245));
   margin-left: -7px;
   margin-right: -7px;
 }
 
-#logo {
-  max-width: 20%;
+.toppanedown {
+  width: 2029px;
+  height: 8%;
+  background-color: rgb(96, 123, 245);
+  margin-left: -7px;
+  position: absolute;
+  top: 184px;
+}
+
+.containerbuttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  flex-direction: row;
+  margin-bottom: 0.5vh;
+  width: 70%;
   height: 100%;
+  margin-left: 16%;
+}
+
+#logo {
+  width: 17%;
+  height: 43%;
   opacity: 80%;
 }
 
@@ -77,28 +131,11 @@ html {
   font-family: 'Rouge Script', cursive;
   font-size: 50px;
   line-height: 108px;
-  margin: 0 0 -50px;
+  margin: 9px 0 -50px;
   text-shadow: 1px 1px 2px #082b34;
 }
 
-.toppanedown {
-  width: 100.7%;
-  height: 100%;
-  background-color: rgb(96, 123, 245);
-  margin-left: -7px;
-  margin-right: -68px;
-}
 
-.containerbuttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 5vh;
-  flex-direction: row;
-  margin-bottom: 0.5vh;
-  width: 70%;
-  height: 100%;
-  margin-left: 14%;
-}
 
 .navbt {
   background-color: rgb(96, 123, 245);
@@ -124,47 +161,41 @@ html {
 
 
 
-.rightpane {
-
-  width: 85.59%;
-  height: 100%;
-  position: relative;
-  float: right;
-  background-color: #4ee6ee;
-  margin-top: -0.29%;
-  border-style: solid;
-  border-width: 1px;
-  margin-right: -7px;
-}
-
 @media screen and (max-width: 1900px) {
-  .aboutme {
-    left: 86%;
-  }
-
-  .title {
-    padding-left: 26%;
-  }
-
   .toppanedown {
-    margin-top: 50px;
+    top: 184px;
+    height: 10%;
     width: 1347px;
     margin-left: -7px;
   }
 
+  .aboutme {
+    left: 86%;
+  }
+
+  #logo {
+    width: 24%;
+  }
+
   .navbt {
-    padding: 21px;
+    padding: 19px;
+    font-size: 17px;
   }
 
   .containerbuttons {
-    margin-left: 196px;
+    margin-left: 12px;
+    width: 100%;
   }
 
   .leftpane {
-    width: 17%;
+    width: 19%;
+    top: 244px;
   }
 
   .rightpane {
-    width: 1118px;
+    width: 1088px;
+    left: 258px;
+    top: 244px;
   }
+
 }
