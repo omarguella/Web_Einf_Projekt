@@ -4,7 +4,7 @@
 }
 
 .middlepane {
-  width: 64%;
+  width: 76%;
   height: 100%;
   position: relative;
   float: left;
@@ -12,13 +12,31 @@
   border-collapse: collapse;
 }
 
+h1 {
+  grid-area: b;
+  text-align: center;
+  background-color: #d9cccc;
+  padding: 10px;
+  margin-top: 0px;
+}
+
 .rightpane {
-  width: 35%;
+  width: 24%;
   height: 100%;
   position: relative;
   float: right;
 
 
+}
+
+#ausfuhren {
+  color: rgb(105, 35, 56);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
 }
 
 .Seite_html {
@@ -33,42 +51,6 @@
   border: 1px solid black;
 }
 
-.execute {
-  padding: 5px 11px;
-  cursor: pointer;
-  font-size: 17px;
-  font-family: Verdana, sans-serif;
-  text-shadow: 3px 3px 3px #ababab;
-
-  color: white;
-  background-color: #689ef7;
-  border: none;
-  border-radius: 9px;
-}
-
-h1 {
-  grid-area: b;
-  text-align: center;
-  background-color: #d9cccc;
-  padding: 10px;
-  margin-top: 0px;
-}
-
-#ausfuhren {
-  color: rgb(105, 35, 56);
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 27px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 1;
-  text-align: center;
-}
-
-/*W3school*/
-.execute:active {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transform: translateY(8px);
-}
 
 
 pre {
@@ -78,57 +60,34 @@ pre {
   border-style: dotted;
 }
 
-.grandpa {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  position: fixed;
-  background-color: #b2d6d1;
+
+
+.execute {
+  padding: 5px 11px;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: Verdana, sans-serif;
+  text-shadow: 3px 3px 3px #ababab;
+  color: white;
+  background-color: #689ef7;
+  border: none;
+  border-radius: 9px;
+  margin-left: 12%;
 }
 
-.papa {
-  left: 5%;
-  top: 11%;
-  width: 90%;
-  height: 100%;
-  position: fixed;
-  background-color: #F0FFFF;
+/*W3school*/
+.execute:active {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(8px);
 }
 
-.p0 {
-  margin-top: 10px;
-  margin-left: 45%;
-  font-family: "Brush Script MT";
-  font-size: 40px;
-}
+@media screen and (max-width: 1900px) {
+  #ausfuhren {
+    font-size: 21px;
+  }
 
-.p1 {
-  display: flex;
-  margin-top: 30px;
-  margin-left: 35%;
-  font-family: "Lucida Handwriting";
-
-}
-
-td {
-  height: 50px;
-}
-
-.left {
-  text-align: right;
-  font-family: "Papyrus";
-
-}
-
-.right {
-  text-align: left;
-}
-
-table {
-  display: flex;
-
-  width: 80%;
-  margin-left: 10%;
+  .execute {
+    margin-left: 3%;
+    font-size: 18px;
+  }
 }

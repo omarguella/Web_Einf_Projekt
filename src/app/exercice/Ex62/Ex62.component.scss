@@ -61,16 +61,11 @@ pre {
 }
 
 
-.execute1 {
-  top: 596%;
-}
 
-.execute2 {
-  top: 2710%;
-}
 
-.execute1,
-.execute2 {
+
+
+.execute {
   padding: 5px 11px;
   cursor: pointer;
   font-size: 29px;
@@ -86,8 +81,7 @@ pre {
 
 
 /*W3school*/
-.execute1,
-.execute2:active {
+.execute:active {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: translateY(8px);
 }
@@ -97,18 +91,16 @@ pre {
     font-size: 21px;
   }
 
-  .execute2 {
-    top: 3684%;
+
+
+
+  #ausfuhren {
+    font-size: 21px;
   }
 
-  .execute1 {
-    top: 921%;
-  }
-
-
-  .execute2,
-  .execute1 {
+  .execute {
     margin-left: 3%;
     font-size: 18px;
   }
+
 }

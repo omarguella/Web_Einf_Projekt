@@ -84,6 +84,8 @@ button:active {
     font-size: 14px;
   }
 
+
+
   li {
     padding: 9px;
   }
@@ -94,7 +96,7 @@ button:active {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
   .aufgabe {
     top: -23px;
     font-size: 13px;

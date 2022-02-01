@@ -129,3 +129,47 @@ button {
 
 
 }
+
+@media screen and (max-width: 1900px) {
+  #ausfuhren {
+    font-size: 21px;
+  }
+
+  .rightpane {
+    left: 1px;
+    width: 36%;
+    height: 100%;
+    position: relative;
+    float: right;
+  }
+
+  header {
+    width: 87%;
+  }
+
+  ul {
+    gap: 21px;
+  }
+
+
+
+  .content {
+    gap: 2px;
+    width: 340px;
+    padding-top: 10px;
+    font-size: 25px;
+  }
+
+  footer {
+    gap: 13px;
+    font-size: 15px;
+    width: 60%;
+  }
+
+  .title2 {
+    padding: 10px;
+    margin-top: -1px;
+    font-size: 20pX;
+    width: 350px;
+  }
+}

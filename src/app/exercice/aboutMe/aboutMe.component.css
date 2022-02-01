@@ -116,3 +116,12 @@ pre {
   border: 2px solid gray;
   border-style: dotted;
 }
+
+
+@media screen and (max-width: 500px) {
+  li {
+    padding: 11px;
+    margin-left: -27px;
+    font-size: 16px;
+  }
+}
