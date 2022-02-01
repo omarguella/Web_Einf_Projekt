@@ -93,3 +93,29 @@ button:active {
     top: 55px;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .aufgabe {
+    top: -23px;
+    font-size: 13px;
+    left: -10%;
+  }
+
+  li {
+    display: inline;
+    padding: 9px;
+  }
+
+  button {
+    width: 53px;
+    font-size: 6px;
+    padding: 5px;
+    width: 53px;
+    right: -18px;
+  }
+
+  .buttons ul {
+    top: -9px;
+    left: 75px;
+  }
+}
